@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI & AutomatizaciÃ³n â€” Wenceslao Echeneid</title>
-  <meta name="description" content="Soluciones de automatizaciÃ³n e inteligencia artificial para negocios modernos." />
+  <title>AI & Automatización — Wenceslao Echeneid</title>
+  <meta name="description" content="Soluciones de automatización e inteligencia artificial para negocios modernos." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
   <style>
@@ -30,11 +30,13 @@
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* â”€â”€ CANVAS BACKGROUND â”€â”€ */
+    /* ── CANVAS BACKGROUND ── */
     #bg-canvas {
       position: fixed;
       inset: 0;
@@ -43,7 +45,7 @@
       opacity: 0.35;
     }
 
-    /* â”€â”€ LANG TOGGLE â”€â”€ */
+    /* ── LANG TOGGLE ── */
     .lang-bar {
       position: fixed;
       top: 1.2rem;
@@ -74,7 +76,7 @@
       color: #fff;
     }
 
-    /* â”€â”€ NAV â”€â”€ */
+    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0;
@@ -97,10 +99,10 @@
     }
     .nav-logo span { color: var(--accent); }
 
-    /* â”€â”€ WRAPPER â”€â”€ */
+    /* ── WRAPPER ── */
     main { position: relative; z-index: 1; }
 
-    /* â”€â”€ HERO â”€â”€ */
+    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -129,10 +131,10 @@
     @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 5rem);
+      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
       font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
       margin-bottom: 1.5rem;
       max-width: 820px;
     }
@@ -141,6 +143,9 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      /* Prevent gradient clipping on descenders */
+      padding-bottom: 0.05em;
+      display: inline-block;
     }
     .hero p {
       font-size: clamp(1rem, 2vw, 1.2rem);
@@ -164,7 +169,7 @@
     }
     .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 0 60px var(--glow); }
 
-    /* â”€â”€ SECTION â”€â”€ */
+    /* ── SECTION ── */
     section {
       padding: 6rem 1.5rem;
       max-width: 1100px;
@@ -179,20 +184,21 @@
       margin-bottom: 0.8rem;
     }
     .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
       font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
       margin-bottom: 1rem;
     }
     .section-sub {
       color: var(--text-muted);
       font-size: 1.05rem;
+      line-height: 1.65;
       max-width: 540px;
       margin-bottom: 3rem;
     }
 
-    /* â”€â”€ CARDS GRID â”€â”€ */
+    /* ── CARDS GRID ── */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -225,13 +231,15 @@
       display: block;
     }
     .card h3 {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 0.6rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
     }
-    .card p { color: var(--text-muted); font-size: 0.95rem; }
+    .card p { color: var(--text-muted); font-size: 0.93rem; line-height: 1.6; }
 
-    /* â”€â”€ STACK â”€â”€ */
+    /* ── STACK ── */
     .stack-grid {
       display: flex;
       flex-wrap: wrap;
@@ -250,7 +258,7 @@
     }
     .tag:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* â”€â”€ TIMELINE â”€â”€ */
+    /* ── TIMELINE ── */
     .timeline { position: relative; padding-left: 2rem; }
     .timeline::before {
       content: '';
@@ -279,7 +287,7 @@
     .timeline-item h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
     .timeline-item p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* â”€â”€ STATS â”€â”€ */
+    /* ── STATS ── */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -296,15 +304,18 @@
     .stat-num {
       font-size: 2.4rem;
       font-weight: 900;
+      letter-spacing: -0.02em;
       background: linear-gradient(135deg, var(--accent), var(--accent3));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       display: block;
+      line-height: 1.15;
+      padding-bottom: 0.05em;
     }
     .stat-label { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.3rem; }
 
-    /* â”€â”€ CTA SECTION â”€â”€ */
+    /* ── CTA SECTION ── */
     .cta-section {
       text-align: center;
       padding: 6rem 1.5rem;
@@ -315,7 +326,7 @@
     .cta-section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 1rem; }
     .cta-section p { color: var(--text-muted); max-width: 500px; margin: 0 auto 2rem; }
 
-    /* â”€â”€ FOOTER â”€â”€ */
+    /* ── FOOTER ── */
     footer {
       text-align: center;
       padding: 2rem;
@@ -325,15 +336,29 @@
     }
     footer a { color: var(--accent); text-decoration: none; }
 
-    /* â”€â”€ RESPONSIVE â”€â”€ */
+    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       nav { padding: 1rem; }
       .lang-bar { top: 0.8rem; right: 0.8rem; }
     }
 
-    /* â”€â”€ LANG VISIBILITY â”€â”€ */
-    [data-lang="es"] .en { display: none; }
-    [data-lang="en"] .es { display: none; }
+    /* ── LANG VISIBILITY ── */
+    /* Default: block display for lang spans so block elements (h1–h4, p) render cleanly */
+    h1 .es, h1 .en,
+    h2 .es, h2 .en,
+    h3 .es, h3 .en,
+    h4 .es, h4 .en,
+    p .es, p .en,
+    div .es, div .en { display: block; }
+
+    /* Override: keep inline in flex/inline containers */
+    .hero-badge .es, .hero-badge .en,
+    .hero-cta .es, .hero-cta .en,
+    .lang-btn .es, .lang-btn .en,
+    .section-label .es, .section-label .en { display: inline; }
+
+    [data-lang="es"] .en { display: none !important; }
+    [data-lang="en"] .es { display: none !important; }
   </style>
 </head>
 <body>
@@ -353,33 +378,33 @@
 
 <main>
 
-  <!-- â”€â”€ HERO â”€â”€ -->
+  <!-- ── HERO ── -->
   <div class="hero">
     <div class="hero-badge">
-      <span class="es">IA Â· AutomatizaciÃ³n Â· Impacto real</span>
-      <span class="en">AI Â· Automation Â· Real impact</span>
+      <span class="es">IA · Automatización · Impacto real</span>
+      <span class="en">AI · Automation · Real impact</span>
     </div>
     <h1>
-      <span class="es">AutomatizÃ¡ tu negocio<br/>con <span class="grad">Inteligencia Artificial</span></span>
+      <span class="es">Automatizá tu negocio<br/>con <span class="grad">Inteligencia Artificial</span></span>
       <span class="en">Automate your business<br/>with <span class="grad">Artificial Intelligence</span></span>
     </h1>
     <p>
-      <span class="es">Flujos inteligentes, bots que trabajan 24/7 y decisiones basadas en datos â€” sin fricciÃ³n.</span>
-      <span class="en">Intelligent workflows, bots that work 24/7 and data-driven decisions â€” without friction.</span>
+      <span class="es">Flujos inteligentes, bots que trabajan 24/7 y decisiones basadas en datos — sin fricción.</span>
+      <span class="en">Intelligent workflows, bots that work 24/7 and data-driven decisions — without friction.</span>
     </p>
     <a href="#servicios" class="hero-cta">
-      <span class="es">ExplorÃ¡ los servicios â†’</span>
-      <span class="en">Explore services â†’</span>
+      <span class="es">Explorá los servicios →</span>
+      <span class="en">Explore services →</span>
     </a>
   </div>
 
-  <!-- â”€â”€ STATS â”€â”€ -->
+  <!-- ── STATS ── -->
   <section style="padding-top:0">
     <div class="stats-row">
       <div class="stat">
         <span class="stat-num">80%</span>
         <div class="stat-label">
-          <span class="es">ReducciÃ³n de tareas manuales</span>
+          <span class="es">Reducción de tareas manuales</span>
           <span class="en">Reduction in manual tasks</span>
         </div>
       </div>
@@ -391,7 +416,7 @@
         </div>
       </div>
       <div class="stat">
-        <span class="stat-num">3Ã—</span>
+        <span class="stat-num">3×</span>
         <div class="stat-label">
           <span class="es">Mayor velocidad de respuesta</span>
           <span class="en">Faster response speed</span>
@@ -407,45 +432,45 @@
     </div>
   </section>
 
-  <!-- â”€â”€ SERVICIOS â”€â”€ -->
+  <!-- ── SERVICIOS ── -->
   <section id="servicios">
     <div class="section-label">
       <span class="es">Servicios</span>
       <span class="en">Services</span>
     </div>
     <h2 class="section-title">
-      <span class="es">Â¿QuÃ© puedo hacer por tu negocio?</span>
+      <span class="es">¿Qué puedo hacer por tu negocio?</span>
       <span class="en">What can I do for your business?</span>
     </h2>
     <p class="section-sub">
-      <span class="es">DiseÃ±o e implemento soluciones que conectan herramientas, automatizan procesos y multiplican resultados.</span>
+      <span class="es">Diseño e implemento soluciones que conectan herramientas, automatizan procesos y multiplican resultados.</span>
       <span class="en">I design and implement solutions that connect tools, automate processes, and multiply results.</span>
     </p>
     <div class="grid-3">
       <div class="card">
-        <span class="card-icon">ðŸ¤–</span>
+        <span class="card-icon">🤖</span>
         <h3>
           <span class="es">Bots de WhatsApp & Telegram</span>
           <span class="en">WhatsApp & Telegram Bots</span>
         </h3>
         <p>
-          <span class="es">AtenciÃ³n automÃ¡tica, calificaciÃ³n de leads y envÃ­o de notificaciones sin intervenciÃ³n humana.</span>
+          <span class="es">Atención automática, calificación de leads y envío de notificaciones sin intervención humana.</span>
           <span class="en">Automatic support, lead qualification and notifications without human intervention.</span>
         </p>
       </div>
       <div class="card">
-        <span class="card-icon">âš¡</span>
+        <span class="card-icon">⚡</span>
         <h3>
           <span class="es">Flujos con n8n</span>
           <span class="en">n8n Workflows</span>
         </h3>
         <p>
-          <span class="es">IntegraciÃ³n de CRMs, hojas de cÃ¡lculo, emails y APIs en flujos que se ejecutan solos.</span>
+          <span class="es">Integración de CRMs, hojas de cálculo, emails y APIs en flujos que se ejecutan solos.</span>
           <span class="en">Connecting CRMs, spreadsheets, emails and APIs into self-running workflows.</span>
         </p>
       </div>
       <div class="card">
-        <span class="card-icon">ðŸ§ </span>
+        <span class="card-icon">🧠</span>
         <h3>
           <span class="es">Agentes con LLMs</span>
           <span class="en">LLM-powered Agents</span>
@@ -456,42 +481,42 @@
         </p>
       </div>
       <div class="card">
-        <span class="card-icon">ðŸ“Š</span>
+        <span class="card-icon">📊</span>
         <h3>
           <span class="es">Dashboards e Informes</span>
           <span class="en">Dashboards & Reports</span>
         </h3>
         <p>
-          <span class="es">VisualizaciÃ³n automÃ¡tica de datos y reportes que se generan y envÃ­an sin que tengas que hacer nada.</span>
+          <span class="es">Visualización automática de datos y reportes que se generan y envían sin que tengas que hacer nada.</span>
           <span class="en">Automatic data visualization and reports generated and sent without lifting a finger.</span>
         </p>
       </div>
       <div class="card">
-        <span class="card-icon">ðŸ”—</span>
+        <span class="card-icon">🔗</span>
         <h3>
-          <span class="es">IntegraciÃ³n de APIs</span>
+          <span class="es">Integración de APIs</span>
           <span class="en">API Integration</span>
         </h3>
         <p>
-          <span class="es">ConectÃ¡ cualquier herramienta con cualquier otra: Shopify, Mercado Libre, Google, HubSpot y mÃ¡s.</span>
+          <span class="es">Conectá cualquier herramienta con cualquier otra: Shopify, Mercado Libre, Google, HubSpot y más.</span>
           <span class="en">Connect any tool with any other: Shopify, Mercado Libre, Google, HubSpot and more.</span>
         </p>
       </div>
       <div class="card">
-        <span class="card-icon">ðŸ›¡ï¸</span>
+        <span class="card-icon">🛡️</span>
         <h3>
           <span class="es">Infraestructura VPS</span>
           <span class="en">VPS Infrastructure</span>
         </h3>
         <p>
-          <span class="es">Stack Docker en servidor propio: n8n, Evolution API, bots y mÃ¡s â€” seguro, escalable y tuyo.</span>
-          <span class="en">Docker stack on your own server: n8n, Evolution API, bots and more â€” secure, scalable and yours.</span>
+          <span class="es">Stack Docker en servidor propio: n8n, Evolution API, bots y más — seguro, escalable y tuyo.</span>
+          <span class="en">Docker stack on your own server: n8n, Evolution API, bots and more — secure, scalable and yours.</span>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- â”€â”€ STACK â”€â”€ -->
+  <!-- ── STACK ── -->
   <section id="stack" style="padding-top:0">
     <div class="section-label">Tech Stack</div>
     <h2 class="section-title">
@@ -518,44 +543,44 @@
     </div>
   </section>
 
-  <!-- â”€â”€ PROCESO â”€â”€ -->
+  <!-- ── PROCESO ── -->
   <section id="proceso">
     <div class="section-label">
       <span class="es">Proceso</span>
       <span class="en">Process</span>
     </div>
     <h2 class="section-title">
-      <span class="es">CÃ³mo trabajo</span>
+      <span class="es">Cómo trabajo</span>
       <span class="en">How I work</span>
     </h2>
     <p class="section-sub">
-      <span class="es">De la idea a la producciÃ³n, con foco en resultados reales y rÃ¡pidos.</span>
+      <span class="es">De la idea a la producción, con foco en resultados reales y rápidos.</span>
       <span class="en">From idea to production, focusing on real and fast results.</span>
     </p>
     <div class="timeline">
       <div class="timeline-item">
         <h4>
-          <span class="es">1. DiagnÃ³stico</span>
+          <span class="es">1. Diagnóstico</span>
           <span class="en">1. Diagnosis</span>
         </h4>
         <p>
-          <span class="es">Identificamos quÃ© tareas repetitivas estÃ¡n frenando tu crecimiento y cuÃ¡les tienen mayor impacto si se automatizan.</span>
+          <span class="es">Identificamos qué tareas repetitivas están frenando tu crecimiento y cuáles tienen mayor impacto si se automatizan.</span>
           <span class="en">We identify which repetitive tasks are slowing your growth and which have the highest impact if automated.</span>
         </p>
       </div>
       <div class="timeline-item">
         <h4>
-          <span class="es">2. DiseÃ±o del flujo</span>
+          <span class="es">2. Diseño del flujo</span>
           <span class="en">2. Flow design</span>
         </h4>
         <p>
-          <span class="es">Mapeamos el proceso ideal, elegimos las herramientas correctas y definimos cÃ³mo se conectan.</span>
+          <span class="es">Mapeamos el proceso ideal, elegimos las herramientas correctas y definimos cómo se conectan.</span>
           <span class="en">We map the ideal process, choose the right tools and define how they connect.</span>
         </p>
       </div>
       <div class="timeline-item">
         <h4>
-          <span class="es">3. ImplementaciÃ³n</span>
+          <span class="es">3. Implementación</span>
           <span class="en">3. Implementation</span>
         </h4>
         <p>
@@ -569,37 +594,37 @@
           <span class="en">4. Delivery & support</span>
         </h4>
         <p>
-          <span class="es">Te entrego documentaciÃ³n clara y acompaÃ±amiento post-lanzamiento para que todo siga funcionando.</span>
+          <span class="es">Te entrego documentación clara y acompañamiento post-lanzamiento para que todo siga funcionando.</span>
           <span class="en">I deliver clear documentation and post-launch support so everything keeps running smoothly.</span>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- â”€â”€ CTA â”€â”€ -->
+  <!-- ── CTA ── -->
   <div class="cta-section">
     <h2>
-      <span class="es">Â¿Listo para automatizar?</span>
+      <span class="es">¿Listo para automatizar?</span>
       <span class="en">Ready to automate?</span>
     </h2>
     <p>
-      <span class="es">Hablemos sobre tu negocio y cÃ³mo la IA puede darte tiempo de vuelta.</span>
+      <span class="es">Hablemos sobre tu negocio y cómo la IA puede darte tiempo de vuelta.</span>
       <span class="en">Let's talk about your business and how AI can give you time back.</span>
     </p>
     <a href="mailto:wenceslao.maislin@gmail.com" class="hero-cta">
-      <span class="es">Escribime â†’</span>
-      <span class="en">Get in touch â†’</span>
+      <span class="es">Escribime →</span>
+      <span class="en">Get in touch →</span>
     </a>
   </div>
 
 </main>
 
-<!-- â”€â”€ FOOTER â”€â”€ -->
+<!-- ── FOOTER ── -->
 <footer>
-  <p>Â© 2026 <a href="https://echeneid.com">echeneid.com</a> Â· <a href="https://ai.echeneid.com">ai.echeneid.com</a></p>
+  <p>© 2026 <a href="https://echeneid.com">echeneid.com</a> · <a href="https://ai.echeneid.com">ai.echeneid.com</a></p>
 </footer>
 
-<!-- â”€â”€ ANIMATED BACKGROUND â”€â”€ -->
+<!-- ── ANIMATED BACKGROUND ── -->
 <script>
 (function(){
   const canvas = document.getElementById('bg-canvas');
@@ -663,7 +688,7 @@
   init(); draw();
 })();
 
-// â”€â”€ LANG TOGGLE â”€â”€
+// ── LANG TOGGLE ──
 function setLang(lang){
   document.documentElement.setAttribute('data-lang', lang);
   document.querySelectorAll('.lang-btn').forEach(btn=>{
