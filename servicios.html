@@ -1,868 +1,137 @@
 <!DOCTYPE html>
 <html lang="es" data-lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios IA — Echeneid AI | Automatización & Agentes Inteligentes</title>
-  <meta name="description"
-    content="Servicios de Inteligencia Artificial en Argentina. Agentes autónomos, automatización de procesos, integración con sistemas gubernamentales y soluciones enterprise.">
-
+  <title>Echeneid AI — Capacidades, servicios y soluciones</title>
+  <meta name="description" content="Capacidades de Echeneid AI: agentes conversacionales, automatización end-to-end, integración con sistemas complejos, infraestructura self-hosted y consultoría técnica premium.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ── Services Page Specific ── */
-
-    .page-hero {
-      min-height: 60vh;
-      display: flex;
-      align-items: center;
-      padding-top: 8rem;
-    }
-
-    .page-hero h1 {
-      font-size: clamp(2rem, 5vw, 4rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
-    }
-
-    .page-hero .subtitle {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--text-muted);
-      max-width: 700px;
-      line-height: 1.7;
-    }
-
-    .page-hero .hero-badge {
-      margin-bottom: 2rem;
-    }
-
-    /* ── Credential Strip ── */
-    .credential-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2.5rem;
-    }
-
-    .credential-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      background: var(--surface-1);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: 99px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      transition: all 0.3s ease;
-    }
-
-    .credential-tag:hover {
-      border-color: var(--primary);
-      color: var(--text);
-    }
-
-    .credential-tag .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--primary);
-    }
-
-    .credential-tag .dot.purple { background: var(--secondary); }
-    .credential-tag .dot.cyan { background: var(--tertiary); }
-
-    /* ── Service Detail Cards ── */
-    .service-detail {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      margin-bottom: 6rem;
-    }
-
-    .service-detail.reverse {
-      direction: rtl;
-    }
-
-    .service-detail.reverse > * {
-      direction: ltr;
-    }
-
-    .service-detail-content {
-      padding: 1rem 0;
-    }
-
-    .service-detail-content .service-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--primary);
-      margin-bottom: 1rem;
-      padding: 0.4rem 1rem;
-      background: rgba(59, 130, 246, 0.1);
-      border-radius: 99px;
-      border: 1px solid rgba(59, 130, 246, 0.2);
-    }
-
-    .service-detail-content .service-label.purple {
-      color: var(--secondary);
-      background: rgba(139, 92, 246, 0.1);
-      border-color: rgba(139, 92, 246, 0.2);
-    }
-
-    .service-detail-content .service-label.cyan {
-      color: var(--tertiary);
-      background: rgba(6, 182, 212, 0.1);
-      border-color: rgba(6, 182, 212, 0.2);
-    }
-
-    .service-detail-content h3 {
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .service-detail-content p {
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
-    .service-detail-visual {
-      position: relative;
-    }
-
-    .service-detail-visual .glass-card {
-      padding: 2rem;
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    /* ── Feature List (inside detail cards) ── */
-    .feature-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .feature-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .feature-list li .check {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      margin-top: 2px;
-      border-radius: 50%;
-      background: rgba(59, 130, 246, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .feature-list li .check svg {
-      width: 12px;
-      height: 12px;
-      stroke: var(--primary);
-    }
-
-    .feature-list li .check.purple { background: rgba(139, 92, 246, 0.15); }
-    .feature-list li .check.purple svg { stroke: var(--secondary); }
-    .feature-list li .check.cyan { background: rgba(6, 182, 212, 0.15); }
-    .feature-list li .check.cyan svg { stroke: var(--tertiary); }
-
-    /* ── Code Window (visual element) ── */
-    .code-window {
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-    }
-
-    .code-window-bar {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1rem;
-      background: rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .code-window-bar span {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .code-window-bar span:nth-child(1) { background: #ff5f57; }
-    .code-window-bar span:nth-child(2) { background: #febc2e; }
-    .code-window-bar span:nth-child(3) { background: #28c840; }
-
-    .code-window-bar .title {
-      width: auto;
-      height: auto;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-left: 0.5rem;
-      background: none;
-      border-radius: 0;
-    }
-
-    .code-window pre {
-      margin: 0;
-      padding: 1.25rem;
-      font-family: 'Courier New', monospace;
-      font-size: 0.8rem;
-      line-height: 1.7;
-      color: #a5b4fc;
-      overflow-x: auto;
-    }
-
-    .code-window pre .comment { color: #6b7280; }
-    .code-window pre .keyword { color: #c084fc; }
-    .code-window pre .string { color: #34d399; }
-    .code-window pre .func { color: #60a5fa; }
-    .code-window pre .op { color: #fbbf24; }
-
-    /* ── Capabilities Grid ── */
-    .capabilities-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .capability-card {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .capability-card .cap-icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 1.25rem;
-      border-radius: 16px;
-      background: rgba(59, 130, 246, 0.1);
-      border: 1px solid rgba(59, 130, 246, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .capability-card .cap-icon svg {
-      width: 24px;
-      height: 24px;
-      stroke: var(--primary);
-    }
-
-    .capability-card .cap-icon.purple {
-      background: rgba(139, 92, 246, 0.1);
-      border-color: rgba(139, 92, 246, 0.15);
-    }
-
-    .capability-card .cap-icon.purple svg { stroke: var(--secondary); }
-
-    .capability-card .cap-icon.cyan {
-      background: rgba(6, 182, 212, 0.1);
-      border-color: rgba(6, 182, 212, 0.15);
-    }
-
-    .capability-card .cap-icon.cyan svg { stroke: var(--tertiary); }
-
-    .capability-card h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .capability-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* ── Case Study Banner ── */
-    .case-banner {
-      position: relative;
-      padding: 3rem;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      margin-bottom: 2rem;
-    }
-
-    .case-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.06));
-      z-index: 0;
-    }
-
-    .case-banner > * { position: relative; z-index: 1; }
-
-    .case-banner .case-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--tertiary);
-      margin-bottom: 1rem;
-    }
-
-    .case-banner h3 {
-      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .case-banner p {
-      color: var(--text-muted);
-      line-height: 1.8;
-      max-width: 800px;
-    }
-
-    .case-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .case-stat .stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    .case-stat .stat-label {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 992px) {
-      .service-detail {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .service-detail.reverse {
-        direction: ltr;
-      }
-      .capabilities-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .capabilities-grid {
-        grid-template-columns: 1fr;
-      }
-      .case-stats {
-        gap: 1.5rem;
-      }
-      .credential-strip {
-        gap: 0.5rem;
-      }
-      .credential-tag {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-      }
-    }
-  </style>
 </head>
-
 <body>
+  <div class="site-shell inner-page">
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <div class="ambient-grid"></div>
 
-  <!-- Background -->
-  <div class="glow-blob glow-1"></div>
-  <div class="glow-blob glow-2"></div>
-  <canvas id="bg-canvas"></canvas>
-
-  <!-- Language Toggle -->
-  <div class="lang-bar glassmorphism">
-    <button class="lang-btn active" onclick="setLang('es')">ES</button>
-    <button class="lang-btn" onclick="setLang('en')">EN</button>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="glass-nav">
-    <a href="index.html" class="logo">ech<span>ai</span>.</a>
-    <div class="nav-links">
-      <a href="#gobierno"><span class="es">Sector P&uacute;blico</span><span class="en">Public Sector</span></a>
-      <a href="#enterprise"><span class="es">Enterprise</span><span class="en">Enterprise</span></a>
-      <a href="#capacidades"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
-      <a href="#contact" class="btn-outline"><span class="es">Hablemos</span><span class="en">Let's Talk</span></a>
-    </div>
-  </nav>
-
-  <main>
-    <!-- ═══════════ PAGE HERO ═══════════ -->
-    <section class="page-hero" id="top">
-      <div class="container hero-content">
-        <div class="hero-badge reveal" data-delay="100">
-          <span class="indicator"></span>
-          <span class="es">Argentina &middot; Sector P&uacute;blico &middot; Enterprise</span>
-          <span class="en">Argentina &middot; Public Sector &middot; Enterprise</span>
-        </div>
-        <h1 class="reveal" data-delay="200">
-          <span class="es">Servicios de <span class="text-gradient">Inteligencia Artificial</span> en Argentina</span>
-          <span class="en"><span class="text-gradient">Artificial Intelligence</span> Services in Argentina</span>
-        </h1>
-        <p class="subtitle reveal" data-delay="300">
-          <span class="es">Dise&ntilde;o, construyo y opero soluciones de IA para organismos p&uacute;blicos y empresas privadas. Desde agentes conversacionales que consultan bases de datos del Estado hasta infraestructuras de automatizaci&oacute;n 24/7 desplegadas en servidores propios.</span>
-          <span class="en">I design, build, and operate AI solutions for public agencies and private enterprises. From conversational agents querying government databases to 24/7 automation infrastructure deployed on self-hosted servers.</span>
-        </p>
-
-        <div class="credential-strip reveal" data-delay="400">
-          <div class="credential-tag"><span class="dot"></span>
-            <span class="es">Experiencia en Estado Nacional</span>
-            <span class="en">National Government Experience</span>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="index.html" class="brand">echeneid<span>ai</span></a>
+        <nav class="desktop-nav">
+          <a href="#capabilities"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
+          <a href="#verticals"><span class="es">Verticales</span><span class="en">Verticals</span></a>
+          <a href="#delivery"><span class="es">Entrega</span><span class="en">Delivery</span></a>
+        </nav>
+        <div class="topbar-actions">
+          <div class="lang-switch">
+            <button class="lang-btn active" data-lang-btn="es">ES</button>
+            <button class="lang-btn" data-lang-btn="en">EN</button>
           </div>
-          <div class="credential-tag"><span class="dot purple"></span>
-            <span class="es">Infraestructura Self-Hosted</span>
-            <span class="en">Self-Hosted Infrastructure</span>
-          </div>
-          <div class="credential-tag"><span class="dot cyan"></span>
-            <span class="es">Modelos Claude &amp; GPT</span>
-            <span class="en">Claude &amp; GPT Models</span>
-          </div>
+          <a class="btn btn-secondary" href="index.html#contact"><span class="es">Contactar</span><span class="en">Contact</span></a>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- ═══════════ SECTOR PÚBLICO — SUGOP ═══════════ -->
-    <section class="section-padding" id="gobierno">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">
-            <span class="es">Sector P&uacute;blico</span><span class="en">Public Sector</span>
-          </div>
-          <h2>
-            <span class="es">IA aplicada a la Gesti&oacute;n P&uacute;blica</span>
-            <span class="en">AI Applied to Public Administration</span>
-          </h2>
+    <main>
+      <section class="hero compact section">
+        <div class="container narrow hero-copy">
+          <div class="eyebrow reveal"><span class="status-dot"></span><span class="es">Arquitectura, agentes, automatización e infraestructura</span><span class="en">Architecture, agents, automation and infrastructure</span></div>
+          <h1 class="reveal delay-1"><span class="es">Capacidades para proyectos donde la IA tiene que generar valor, no ruido.</span><span class="en">Capabilities for projects where AI must create value, not noise.</span></h1>
+          <p class="hero-lead reveal delay-2"><span class="es">Combinamos diseño de producto, ingeniería de sistemas e integración operativa para construir soluciones elegantes, mantenibles y listas para producción.</span><span class="en">We combine product design, systems engineering and operational integration to build elegant, maintainable, production-ready solutions.</span></p>
         </div>
+      </section>
 
-        <!-- Case Study: SUGOP -->
-        <div class="case-banner glass-card reveal" data-delay="100">
-          <div class="case-label">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span class="es">Caso: Ministerio de Infraestructura</span>
-            <span class="en">Case: Ministry of Infrastructure</span>
+      <section class="section" id="capabilities">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker"><span class="es">Capacidades</span><span class="en">Capabilities</span></span>
+            <h2><span class="es">Qué construimos.</span><span class="en">What we build.</span></h2>
           </div>
-          <h3>
-            <span class="es">Agente Inteligente SUGOP &mdash; Sistema &Uacute;nico de Gesti&oacute;n de Obras P&uacute;blicas</span>
-            <span class="en">SUGOP Intelligent Agent &mdash; Public Works Management System</span>
-          </h3>
-          <p>
-            <span class="es">Integraci&oacute;n con el sistema SUGOP del Estado Nacional argentino para consultas en lenguaje natural sobre expedientes de obra p&uacute;blica, certificados, redeterminaciones de precios, estados de tr&aacute;mite y asignaciones de &aacute;reas. El agente se autentica v&iacute;a OAuth2 contra el servidor de identidad del ministerio y procesa respuestas estructuradas (tablas, CSV, texto libre) para devolver informaci&oacute;n clara al usuario.</span>
-            <span class="en">Integration with Argentina's national SUGOP system for natural language queries on public works records, certificates, price redeterminations, processing status, and area assignments. The agent authenticates via OAuth2 against the ministry's identity server and processes structured responses (tables, CSV, free text) to deliver clear information to the user.</span>
-          </p>
-          <div class="case-stats">
-            <div class="case-stat">
-              <span class="stat-value text-gradient">
-                <span class="es">Obras P&uacute;blicas</span>
-                <span class="en">Public Works</span>
-              </span>
-              <span class="stat-label">
-                <span class="es">Dominio principal</span>
-                <span class="en">Primary domain</span>
-              </span>
-            </div>
-            <div class="case-stat">
-              <span class="stat-value text-gradient">OAuth2</span>
-              <span class="stat-label">
-                <span class="es">Autenticaci&oacute;n segura</span>
-                <span class="en">Secure authentication</span>
-              </span>
-            </div>
-            <div class="case-stat">
-              <span class="stat-value text-gradient">
-                <span class="es">Lenguaje Natural</span>
-                <span class="en">Natural Language</span>
-              </span>
-              <span class="stat-label">
-                <span class="es">Interfaz de consulta</span>
-                <span class="en">Query interface</span>
-              </span>
-            </div>
+          <div class="detail-grid">
+            <article class="detail-card glass reveal">
+              <h3><span class="es">Agentes con herramientas reales</span><span class="en">Agents with real tools</span></h3>
+              <p><span class="es">Asistentes con acceso a APIs, Gmail, mensajería, navegadores, repositorios, documentos y sistemas propietarios.</span><span class="en">Assistants with access to APIs, Gmail, messaging, browsers, repositories, documents and proprietary systems.</span></p>
+              <ul>
+                <li><span class="es">Tool use controlado</span><span class="en">Controlled tool use</span></li>
+                <li><span class="es">Memoria operativa y contexto</span><span class="en">Operational memory and context</span></li>
+                <li><span class="es">Flujos multiagente cuando hace falta</span><span class="en">Multi-agent flows when needed</span></li>
+              </ul>
+            </article>
+            <article class="detail-card glass reveal delay-1">
+              <h3><span class="es">Automatización integral</span><span class="en">End-to-end automation</span></h3>
+              <p><span class="es">Procesos que leen, clasifican, responden, disparan acciones y dejan trazabilidad sobre sistemas internos y externos.</span><span class="en">Processes that read, classify, respond, trigger actions and keep traceability across internal and external systems.</span></p>
+              <ul>
+                <li><span class="es">n8n + APIs + bases de datos</span><span class="en">n8n + APIs + databases</span></li>
+                <li><span class="es">Alertas, reportes y catch-up</span><span class="en">Alerts, reports and catch-up logic</span></li>
+                <li><span class="es">Reglas, retries y observabilidad</span><span class="en">Rules, retries and observability</span></li>
+              </ul>
+            </article>
+            <article class="detail-card glass reveal delay-2">
+              <h3><span class="es">Infraestructura premium</span><span class="en">Premium infrastructure</span></h3>
+              <p><span class="es">Despliegues self-hosted, dominios, TLS, reverse proxies, cron, monitoreo, backups y prácticas serias de continuidad.</span><span class="en">Self-hosted deployments, domains, TLS, reverse proxies, cron, monitoring, backups and serious continuity practices.</span></p>
+              <ul>
+                <li><span class="es">Docker / VPS / Linux</span><span class="en">Docker / VPS / Linux</span></li>
+                <li><span class="es">GitHub-driven deploys</span><span class="en">GitHub-driven deploys</span></li>
+                <li><span class="es">Arquitecturas con ownership claro</span><span class="en">Architectures with clear ownership</span></li>
+              </ul>
+            </article>
           </div>
         </div>
+      </section>
 
-        <!-- Detail: Government AI -->
-        <div class="service-detail reveal" data-delay="200">
-          <div class="service-detail-content">
-            <div class="service-label">
-              <span class="es">Agentes para el Estado</span>
-              <span class="en">Government Agents</span>
-            </div>
-            <h3>
-              <span class="es">Consultas inteligentes sobre sistemas p&uacute;blicos</span>
-              <span class="en">Intelligent queries on public systems</span>
-            </h3>
-            <p>
-              <span class="es">Construyo agentes que se integran con las APIs de los sistemas de gesti&oacute;n del Estado (GDE, SUGOP, TAD) para que funcionarios y ciudadanos puedan hacer consultas complejas en espa&ntilde;ol sin conocer la estructura de la base de datos.</span>
-              <span class="en">I build agents that integrate with government management system APIs (GDE, SUGOP, TAD) so officials and citizens can make complex queries in Spanish without knowing the database structure.</span>
-            </p>
-            <ul class="feature-list">
-              <li>
-                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">B&uacute;squeda de expedientes GDE por estado, &aacute;rea, obra o empresa</span>
-                  <span class="en">GDE record search by status, area, project, or company</span>
-                </span>
-              </li>
-              <li>
-                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Trazabilidad de tr&aacute;mites: certificados de obra, anticipos financieros, planes de obra</span>
-                  <span class="en">Process traceability: work certificates, financial advances, project plans</span>
-                </span>
-              </li>
-              <li>
-                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Reportes autom&aacute;ticos en PDF y CSV listos para auditor&iacute;a</span>
-                  <span class="en">Automated PDF and CSV reports ready for audit</span>
-                </span>
-              </li>
-              <li>
-                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Conversaciones multi-turno con memoria de contexto por sesi&oacute;n</span>
-                  <span class="en">Multi-turn conversations with per-session context memory</span>
-                </span>
-              </li>
-            </ul>
+      <section class="section" id="verticals">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker"><span class="es">Verticales</span><span class="en">Verticals</span></span>
+            <h2><span class="es">Dónde esto funciona especialmente bien.</span><span class="en">Where this works especially well.</span></h2>
           </div>
-          <div class="service-detail-visual">
-            <div class="code-window">
-              <div class="code-window-bar">
-                <span></span><span></span><span></span>
-                <span class="title">sugop-agent.py</span>
-              </div>
-              <pre><span class="comment"># Consulta en lenguaje natural al SUGOP</span>
-<span class="keyword">query</span> <span class="op">=</span> <span class="string">&quot;&iquest;Cu&aacute;l es el estado del expediente
-  EX-2025-00142 y qu&eacute; &aacute;rea lo tiene?&quot;</span>
+          <div class="vertical-list">
+            <article class="vertical-item glass reveal">
+              <h3><span class="es">Sector público y sistemas documentales</span><span class="en">Public sector and document systems</span></h3>
+              <p><span class="es">Consulta de expedientes, historial, descarga de documentos, agentes sobre sistemas complejos y datos con trazabilidad.</span><span class="en">Record lookup, history, document download, agents over complex systems and traceable data.</span></p>
+            </article>
+            <article class="vertical-item glass reveal delay-1">
+              <h3><span class="es">Empresas con operación distribuida</span><span class="en">Distributed operations companies</span></h3>
+              <p><span class="es">Atención, seguimiento, coordinación interna, reportes automáticos y automatización de comunicación crítica.</span><span class="en">Support, follow-up, internal coordination, automatic reporting and automation of critical communication.</span></p>
+            </article>
+            <article class="vertical-item glass reveal delay-2">
+              <h3><span class="es">Equipos técnicos que quieren velocidad sin perder control</span><span class="en">Technical teams that want speed without losing control</span></h3>
+              <p><span class="es">Implementaciones premium con criterio de arquitectura, no demos improvisadas.</span><span class="en">Premium implementations guided by architecture judgment, not improvised demos.</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-<span class="comment"># OAuth2 → Identity Server del Ministerio</span>
-<span class="func">auth</span>(user=<span class="string">&quot;CUIL&quot;</span>, scope=<span class="string">&quot;profile roles&quot;</span>)
-
-<span class="comment"># El agente responde con datos reales</span>
-<span class="op">&rarr;</span> Expediente: <span class="string">EX-2025-00142</span>
-  Estado: <span class="string">En tr&aacute;mite</span>
-  &Aacute;rea actual: <span class="string">DGOP - Mesa de Entradas</span>
-  Obra: <span class="string">Ruta Nacional 40, Tramo III</span>
-  &Uacute;ltimo movimiento: <span class="string">2025-03-07</span></pre>
+      <section class="section" id="delivery">
+        <div class="container">
+          <div class="contact-panel glass reveal">
+            <div>
+              <span class="section-kicker"><span class="es">Entrega</span><span class="en">Delivery</span></span>
+              <h2><span class="es">De idea a producción, sin humo.</span><span class="en">From idea to production, without fluff.</span></h2>
+              <p><span class="es">Podemos trabajar desde una auditoría corta hasta una implementación completa con despliegue, documentación y operación continua.</span><span class="en">We can work from a short audit to a full implementation with deployment, documentation and continuous operation.</span></p>
+            </div>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:wenceslao.maislin@gmail.com">wenceslao.maislin@gmail.com</a>
+              <a class="btn btn-ghost" href="index.html"><span class="es">Volver al inicio</span><span class="en">Back to home</span></a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- ═══════════ SECTOR PRIVADO / ENTERPRISE ═══════════ -->
-    <section class="section-padding" id="enterprise">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">
-            <span class="es">Enterprise</span><span class="en">Enterprise</span>
-          </div>
-          <h2>
-            <span class="es">Automatizaci&oacute;n para Empresas</span>
-            <span class="en">Enterprise Automation</span>
-          </h2>
-        </div>
-
-        <!-- Detail: Conversational Agents -->
-        <div class="service-detail reverse reveal" data-delay="100">
-          <div class="service-detail-content">
-            <div class="service-label purple">
-              <span class="es">Agentes Conversacionales</span>
-              <span class="en">Conversational Agents</span>
-            </div>
-            <h3>
-              <span class="es">Bots inteligentes en WhatsApp y Telegram</span>
-              <span class="en">Intelligent bots on WhatsApp &amp; Telegram</span>
-            </h3>
-            <p>
-              <span class="es">Despliego asistentes de IA conectados a los canales de mensajer&iacute;a que tus clientes ya usan. Integrados con tu CRM, base de datos y workflows internos, operan 24/7 sin intervenci&oacute;n humana.</span>
-              <span class="en">I deploy AI assistants connected to the messaging channels your customers already use. Integrated with your CRM, database, and internal workflows, they operate 24/7 without human intervention.</span>
-            </p>
-            <ul class="feature-list">
-              <li>
-                <span class="check purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">WhatsApp Business v&iacute;a Evolution API (sin dependencia de Meta Cloud)</span>
-                  <span class="en">WhatsApp Business via Evolution API (no Meta Cloud dependency)</span>
-                </span>
-              </li>
-              <li>
-                <span class="check purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Telegram con bot propio y gateway IA (OpenClaw)</span>
-                  <span class="en">Telegram with custom bot and AI gateway (OpenClaw)</span>
-                </span>
-              </li>
-              <li>
-                <span class="check purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Modelos Claude Opus 4, Sonnet 4 y GPT-4o seg&uacute;n el caso de uso</span>
-                  <span class="en">Claude Opus 4, Sonnet 4, and GPT-4o models per use case</span>
-                </span>
-              </li>
-              <li>
-                <span class="check purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Self-hosted: tus datos nunca salen de tu servidor</span>
-                  <span class="en">Self-hosted: your data never leaves your server</span>
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="service-detail-visual">
-            <div class="glass-card" style="padding: 2rem;">
-              <div style="display:flex;flex-direction:column;gap:1rem;">
-                <div style="display:flex;align-items:flex-start;gap:0.75rem;">
-                  <div style="width:36px;height:36px;border-radius:50%;background:rgba(139,92,246,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg>
-                  </div>
-                  <div style="background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.15);border-radius:12px 12px 12px 2px;padding:0.8rem 1rem;font-size:0.85rem;color:var(--text-muted);line-height:1.5;">
-                    <span class="es">&iquest;Cu&aacute;l es el estado de mi pedido #4521?</span>
-                    <span class="en">What's the status of my order #4521?</span>
-                  </div>
-                </div>
-                <div style="display:flex;align-items:flex-start;gap:0.75rem;align-self:flex-end;flex-direction:row-reverse;">
-                  <div style="width:36px;height:36px;border-radius:50%;background:rgba(59,130,246,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2z"/></svg>
-                  </div>
-                  <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.15);border-radius:12px 12px 2px 12px;padding:0.8rem 1rem;font-size:0.85rem;color:var(--text-muted);line-height:1.5;">
-                    <span class="es">Tu pedido #4521 est&aacute; en camino. Sali&oacute; del dep&oacute;sito hoy a las 14:30. Estimado de entrega: ma&ntilde;ana antes de las 18hs. &iquest;Necesit&aacute;s algo m&aacute;s?</span>
-                    <span class="en">Your order #4521 is on its way. It left the warehouse today at 2:30 PM. Estimated delivery: tomorrow before 6 PM. Need anything else?</span>
-                  </div>
-                </div>
-                <div style="display:flex;align-items:flex-start;gap:0.75rem;">
-                  <div style="width:36px;height:36px;border-radius:50%;background:rgba(139,92,246,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg>
-                  </div>
-                  <div style="background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.15);border-radius:12px 12px 12px 2px;padding:0.8rem 1rem;font-size:0.85rem;color:var(--text-muted);line-height:1.5;">
-                    <span class="es">Perfecto, gracias!</span>
-                    <span class="en">Perfect, thanks!</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Detail: Workflow Automation -->
-        <div class="service-detail reveal" data-delay="200">
-          <div class="service-detail-content">
-            <div class="service-label cyan">
-              <span class="es">Automatizaci&oacute;n de Procesos</span>
-              <span class="en">Process Automation</span>
-            </div>
-            <h3>
-              <span class="es">Flujos inteligentes con n8n y Docker</span>
-              <span class="en">Intelligent workflows with n8n &amp; Docker</span>
-            </h3>
-            <p>
-              <span class="es">Orquesto procesos de negocio complejos usando n8n como motor de automatizaci&oacute;n, desplegado en infraestructura propia con Docker. Sin l&iacute;mites de ejecuci&oacute;n, sin costos por workflow, sin vendor lock-in.</span>
-              <span class="en">I orchestrate complex business processes using n8n as the automation engine, deployed on self-hosted infrastructure with Docker. No execution limits, no per-workflow costs, no vendor lock-in.</span>
-            </p>
-            <ul class="feature-list">
-              <li>
-                <span class="check cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Integraci&oacute;n con APIs REST, webhooks, bases de datos y servicios cloud</span>
-                  <span class="en">Integration with REST APIs, webhooks, databases, and cloud services</span>
-                </span>
-              </li>
-              <li>
-                <span class="check cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Flujos con l&oacute;gica condicional, reintentos y manejo de errores</span>
-                  <span class="en">Workflows with conditional logic, retries, and error handling</span>
-                </span>
-              </li>
-              <li>
-                <span class="check cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Deploy autom&aacute;tico v&iacute;a GitHub Actions (CI/CD completo)</span>
-                  <span class="en">Automated deploy via GitHub Actions (full CI/CD)</span>
-                </span>
-              </li>
-              <li>
-                <span class="check cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-                <span>
-                  <span class="es">Monitoreo y mantenimiento automatizado con reportes diarios</span>
-                  <span class="en">Automated monitoring and maintenance with daily reports</span>
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="service-detail-visual">
-            <div class="code-window">
-              <div class="code-window-bar">
-                <span></span><span></span><span></span>
-                <span class="title">docker-stack.yml</span>
-              </div>
-              <pre><span class="comment"># Stack productivo real — tu servidor</span>
-<span class="keyword">services</span>:
-  <span class="func">n8n</span>:
-    image: <span class="string">n8nio/n8n:latest</span>
-    deploy:
-      replicas: <span class="op">1</span>
-      restart_policy: always
-
-  <span class="func">evolution-api</span>:
-    image: <span class="string">evoapicloud/evolution-api</span>
-    <span class="comment"># WhatsApp sin Meta Cloud API</span>
-
-  <span class="func">ai-gateway</span>:
-    image: <span class="string">openclaw:latest</span>
-    <span class="comment"># Telegram bot + Claude API</span>
-
-  <span class="func">traefik</span>:
-    image: <span class="string">traefik:3.x</span>
-    <span class="comment"># SSL autom&aacute;tico + routing</span></pre>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ CAPACIDADES TÉCNICAS ═══════════ -->
-    <section class="section-padding" id="capacidades">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">
-            <span class="es">Know-How</span><span class="en">Know-How</span>
-          </div>
-          <h2>
-            <span class="es">Capacidades T&eacute;cnicas Demostradas</span>
-            <span class="en">Proven Technical Capabilities</span>
-          </h2>
-        </div>
-
-        <div class="capabilities-grid">
-          <!-- Cap 1 -->
-          <div class="capability-card glass-card reveal" data-delay="0">
-            <div class="cap-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zm0 4c2.8 0 5 2.2 5 5v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5c0-2.8 2.2-5 5-5z"/></svg>
-            </div>
-            <h4><span class="es">Agentes LLM</span><span class="en">LLM Agents</span></h4>
-            <p><span class="es">Claude Opus/Sonnet, GPT-4o, modelos locales. Prompt engineering avanzado, tool use, RAG.</span><span class="en">Claude Opus/Sonnet, GPT-4o, local models. Advanced prompt engineering, tool use, RAG.</span></p>
-          </div>
-          <!-- Cap 2 -->
-          <div class="capability-card glass-card reveal" data-delay="100">
-            <div class="cap-icon purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
-            </div>
-            <h4><span class="es">Infraestructura Docker</span><span class="en">Docker Infrastructure</span></h4>
-            <p><span class="es">Docker Swarm, Compose, Traefik, Nginx. Deploys zero-downtime, SSL autom&aacute;tico, bind mounts.</span><span class="en">Docker Swarm, Compose, Traefik, Nginx. Zero-downtime deploys, auto SSL, bind mounts.</span></p>
-          </div>
-          <!-- Cap 3 -->
-          <div class="capability-card glass-card reveal" data-delay="200">
-            <div class="cap-icon cyan">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <h4><span class="es">Automatizaci&oacute;n n8n</span><span class="en">n8n Automation</span></h4>
-            <p><span class="es">Flujos complejos con webhooks, l&oacute;gica condicional, integraciones con CRMs y bases de datos.</span><span class="en">Complex workflows with webhooks, conditional logic, CRM and database integrations.</span></p>
-          </div>
-          <!-- Cap 4 -->
-          <div class="capability-card glass-card reveal" data-delay="300">
-            <div class="cap-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg>
-            </div>
-            <h4><span class="es">Bots Multicanal</span><span class="en">Multi-Channel Bots</span></h4>
-            <p><span class="es">WhatsApp (Evolution API), Telegram (OpenClaw), web chat. Sin depender de APIs cloud de terceros.</span><span class="en">WhatsApp (Evolution API), Telegram (OpenClaw), web chat. No third-party cloud API dependency.</span></p>
-          </div>
-          <!-- Cap 5 -->
-          <div class="capability-card glass-card reveal" data-delay="400">
-            <div class="cap-icon purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h4><span class="es">APIs Gubernamentales</span><span class="en">Government APIs</span></h4>
-            <p><span class="es">Integraci&oacute;n con SUGOP, GDE, OpenIddict. OAuth2, CUIL auth, manejo de entornos UAT/PROD.</span><span class="en">Integration with SUGOP, GDE, OpenIddict. OAuth2, CUIL auth, UAT/PROD environment handling.</span></p>
-          </div>
-          <!-- Cap 6 -->
-          <div class="capability-card glass-card reveal" data-delay="500">
-            <div class="cap-icon cyan">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h4><span class="es">CI/CD &amp; DevOps</span><span class="en">CI/CD &amp; DevOps</span></h4>
-            <p><span class="es">GitHub Actions, deploy autom&aacute;tico v&iacute;a SSH, monitoreo con reportes HTML diarios, fail2ban.</span><span class="en">GitHub Actions, automated SSH deploy, monitoring with daily HTML reports, fail2ban.</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ CTA ═══════════ -->
-    <section class="cta section-padding" id="contact">
-      <div class="container">
-        <div class="cta-box glass-card reveal">
-          <h2>
-            <span class="es">&iquest;Necesit&aacute;s IA para tu organizaci&oacute;n?</span>
-            <span class="en">Need AI for your organization?</span>
-          </h2>
-          <p>
-            <span class="es">Ya sea sector p&uacute;blico o privado, cada soluci&oacute;n se dise&ntilde;a a medida. Agend&aacute; una llamada t&eacute;cnica para evaluar tu caso.</span>
-            <span class="en">Whether public or private sector, every solution is custom-designed. Book a technical call to evaluate your case.</span>
-          </p>
-          <a href="mailto:wenceslao.maislin@gmail.com" class="btn-primary" style="margin-top: 2rem;">
-            <span class="es">Iniciar Conversaci&oacute;n &RightArrow;</span>
-            <span class="en">Start Conversation &RightArrow;</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="index.html" class="logo">ech<span>ai</span>.</a>
-        <p class="copyright">&copy; 2026 Echeneid AI. <span class="es">Todos los derechos reservados.</span><span class="en">All rights reserved.</span></p>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener">LinkedIn</a>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>© 2026 Echeneid AI</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
           <a href="mailto:wenceslao.maislin@gmail.com">Email</a>
+          <a href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
   <script src="main.js"></script>
 </body>
-
 </html>

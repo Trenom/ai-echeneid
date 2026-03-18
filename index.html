@@ -1,334 +1,225 @@
 <!DOCTYPE html>
 <html lang="es" data-lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wenceslao Echeneid — AI & Automation Architect</title>
-  <meta name="description"
-    content="Premium Automation & AI Solutions for modern businesses. Transforming operations with n8n, LLMs, and intelligent bots.">
-
-  <!-- Fonts: Outfit for pristine modern look -->
+  <title>Echeneid AI — Consultora premium de inteligencia artificial</title>
+  <meta name="description" content="Consultora premium de inteligencia artificial, automatización y agentes para empresas y sector público. Arquitectura, despliegue y operación de sistemas de IA listos para producción.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="site-shell">
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <div class="ambient-grid"></div>
 
-  <!-- Background Layer -->
-  <div class="glow-blob glow-1"></div>
-  <div class="glow-blob glow-2"></div>
-  <canvas id="bg-canvas"></canvas>
-
-  <!-- Language Toggle -->
-  <div class="lang-bar glassmorphism">
-    <button class="lang-btn active" onclick="setLang('es')">ES</button>
-    <button class="lang-btn" onclick="setLang('en')">EN</button>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="glass-nav">
-    <a href="#" class="logo">ech<span>ai</span>.</a>
-    <div class="nav-links">
-      <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
-      <a href="servicios.html"><span class="es">Servicios IA</span><span class="en">AI Services</span></a>
-      <a href="#stack"><span class="es">Tech</span><span class="en">Tech</span></a>
-      <a href="#process"><span class="es">Proceso</span><span class="en">Process</span></a>
-      <a href="#contact" class="btn-outline"><span class="es">Hablemos</span><span class="en">Let's Talk</span></a>
-    </div>
-  </nav>
-
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-      <div class="container hero-content">
-        <div class="hero-badge reveal" data-delay="100">
-          <span class="indicator"></span>
-          <span class="es">IA · Automatización · Escala Global</span>
-          <span class="en">AI · Automation · Global Scale</span>
-        </div>
-        <h1 class="reveal" data-delay="200">
-          <span class="es">Diseñando el futuro de tu negocio con <span class="text-gradient">Inteligencia
-              Artificial</span></span>
-          <span class="en">Architecting your business future with <span class="text-gradient">Artificial
-              Intelligence</span></span>
-        </h1>
-        <p class="subtitle reveal" data-delay="300">
-          <span class="es">Construyo infraestructuras tecnológicas de alto rendimiento. Flujos inteligentes, agentes
-            autónomos y decisiones basadas en datos — sin fricción.</span>
-          <span class="en">I build high-performance technological infrastructures. Intelligent workflows, autonomous
-            agents, and data-driven decisions — without friction.</span>
-        </p>
-        <div class="hero-actions reveal" data-delay="400">
-          <a href="#services" class="btn-primary">
-            <span class="es">Explorar Capacidades &RightArrow;</span>
-            <span class="en">Explore Capabilities &RightArrow;</span>
-          </a>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="#home" class="brand">echeneid<span>ai</span></a>
+        <nav class="desktop-nav">
+          <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
+          <a href="#solutions"><span class="es">Soluciones</span><span class="en">Solutions</span></a>
+          <a href="#approach"><span class="es">Método</span><span class="en">Approach</span></a>
+          <a href="servicios.html"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
+        </nav>
+        <div class="topbar-actions">
+          <div class="lang-switch" aria-label="language switch">
+            <button class="lang-btn active" data-lang-btn="es">ES</button>
+            <button class="lang-btn" data-lang-btn="en">EN</button>
+          </div>
+          <a class="btn btn-secondary" href="#contact"><span class="es">Agendar llamada</span><span class="en">Book a call</span></a>
         </div>
       </div>
+    </header>
 
-      <!-- Metrics Strip -->
-      <div class="metrics-strip glassmorphism reveal" data-delay="500">
-        <div class="metric">
-          <span class="number text-gradient">24/7</span>
-          <span class="label es">Operación Autónoma</span>
-          <span class="label en">Autonomous Operation</span>
-        </div>
-        <div class="divider"></div>
-        <div class="metric">
-          <span class="number text-gradient">
-            < 1s</span>
-              <span class="label es">Tiempo de Respuesta</span>
-              <span class="label en">Response Time</span>
-        </div>
-        <div class="divider"></div>
-        <div class="metric">
-          <span class="number text-gradient">0%</span>
-          <span class="label es">Fatiga Operativa</span>
-          <span class="label en">Operational Fatigue</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES (BENTO BOX) -->
-    <section class="services section-padding" id="services">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">
-            <span class="es">Expertise</span><span class="en">Expertise</span>
-          </div>
-          <h2>
-            <span class="es">Ecosistema de Soluciones</span>
-            <span class="en">Solutions Ecosystem</span>
-          </h2>
-        </div>
-
-        <div class="bento-grid">
-          <!-- Bento 1: LLM Agents (Large) -->
-          <div class="bento-card large glass-card reveal">
-            <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path
-                  d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zm0 4c2.8 0 5 2.2 5 5v5c0 2.8-2.2 5-5 5s-5-2.2-5-5v-5c0-2.8 2.2-5 5-5zm0 2c-1.7 0-3 1.3-3 3v5c0 1.7 1.3 3 3 3s3-1.3 3-3v-5c0-1.7-1.3-3-3-3z" />
-              </svg></div>
-            <div class="card-content">
-              <h3>
-                <span class="es">Agentes Cognitivos con LLMs</span>
-                <span class="en">Cognitive Agents with LLMs</span>
-              </h3>
-              <p>
-                <span class="es">Sistemas autónomos capaces de razonar, procesar lenguaje natural y tomar decisiones
-                  complejas utilizando GPT-4o, Claude 3.5 Sonnet y modelos locales.</span>
-                <span class="en">Autonomous systems capable of reasoning, processing natural language, and making
-                  complex decisions using GPT-4o, Claude 3.5 Sonnet, and local models.</span>
-              </p>
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow reveal">
+              <span class="status-dot"></span>
+              <span class="es">Consultora premium de IA · arquitectura, agentes y automatización</span>
+              <span class="en">Premium AI consultancy · architecture, agents and automation</span>
+            </div>
+            <h1 class="reveal delay-1">
+              <span class="es">Construimos sistemas de <span class="gradient-text">inteligencia artificial</span> que operan de verdad.</span>
+              <span class="en">We build <span class="gradient-text">artificial intelligence</span> systems that operate in the real world.</span>
+            </h1>
+            <p class="hero-lead reveal delay-2">
+              <span class="es">Diseñamos, desplegamos y operamos plataformas de IA para empresas y organismos que necesitan automatizar procesos críticos, integrar datos complejos y convertir lenguaje natural en ejecución real.</span>
+              <span class="en">We design, deploy and operate AI platforms for companies and institutions that need to automate critical processes, integrate complex data and turn natural language into real execution.</span>
+            </p>
+            <div class="hero-actions reveal delay-3">
+              <a class="btn btn-primary" href="#contact"><span class="es">Hablar sobre tu proyecto</span><span class="en">Discuss your project</span></a>
+              <a class="btn btn-ghost" href="#services"><span class="es">Ver servicios</span><span class="en">View services</span></a>
+            </div>
+            <div class="hero-metrics reveal delay-4">
+              <div class="metric-card">
+                <strong>24/7</strong>
+                <span class="es">operación automatizada</span><span class="en">automated operation</span>
+              </div>
+              <div class="metric-card">
+                <strong>AI + Ops</strong>
+                <span class="es">de estrategia a producción</span><span class="en">from strategy to production</span>
+              </div>
+              <div class="metric-card">
+                <strong>Self-hosted</strong>
+                <span class="es">control total de datos</span><span class="en">full data control</span>
+              </div>
             </div>
           </div>
-
-          <!-- Bento 2: Workflows -->
-          <div class="bento-card glass-card reveal" data-delay="100">
-            <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg></div>
-            <div class="card-content">
-              <h3>
-                <span class="es">Automatización n8n</span>
-                <span class="en">n8n Automation</span>
-              </h3>
-              <p>
-                <span class="es">Orquestación de procesos complejos integrando CRMs, bases de datos y APIs en flujos
-                  ininterrumpidos.</span>
-                <span class="en">Orchestration of complex processes integrating CRMs, databases, and APIs into seamless
-                  workflows.</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- Bento 3: Conversational -->
-          <div class="bento-card glass-card reveal" data-delay="200">
-            <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" />
-              </svg></div>
-            <div class="card-content">
-              <h3>
-                <span class="es">Interfaces Conversacionales</span>
-                <span class="en">Conversational Interfaces</span>
-              </h3>
-              <p>
-                <span class="es">Bots inteligentes en WhatsApp y Telegram vía Evolution API para ventas y
-                  soporte.</span>
-                <span class="en">Intelligent bots on WhatsApp and Telegram via Evolution API for sales and
-                  support.</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- Bento 4: Infrastructure -->
-          <div class="bento-card glass-card reveal" data-delay="300">
-            <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-                <line x1="6" y1="6" x2="6" y2="6" />
-                <line x1="6" y1="18" x2="6" y2="18" />
-              </svg></div>
-            <div class="card-content">
-              <h3>
-                <span class="es">Infraestructura Abierta</span>
-                <span class="en">Open Infrastructure</span>
-              </h3>
-              <p>
-                <span class="es">Despliegue self-hosted en VPS con Docker (PostgreSQL, n8n, Nginx). Escalable y 100%
-                  bajo tu control.</span>
-                <span class="en">Self-hosted deployment on VPS with Docker (PostgreSQL, n8n, Nginx). Scalable and 100%
-                  yours.</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- Bento 5: Integrations -->
-          <div class="bento-card glass-card reveal" data-delay="400">
-            <div class="icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-              </svg></div>
-            <div class="card-content">
-              <h3>
-                <span class="es">Ingeniería de APIs</span>
-                <span class="en">API Engineering</span>
-              </h3>
-              <p>
-                <span class="es">Conexiones robustas mediante webhooks y REST APIs.</span>
-                <span class="en">Robust connections via webhooks and REST APIs.</span>
-              </p>
+          <div class="hero-panel reveal delay-2">
+            <div class="signal-card glass">
+              <div class="signal-top">
+                <span class="pill"><span class="es">Señales clave</span><span class="en">Key signals</span></span>
+                <span class="mini-label">Echeneid AI</span>
+              </div>
+              <div class="signal-list">
+                <div class="signal-item">
+                  <span class="signal-title"><span class="es">Agentes operativos</span><span class="en">Operational agents</span></span>
+                  <p><span class="es">Asistentes que consultan APIs, ejecutan workflows y responden con contexto.</span><span class="en">Assistants that query APIs, execute workflows and answer with context.</span></p>
+                </div>
+                <div class="signal-item">
+                  <span class="signal-title"><span class="es">Automatización de procesos</span><span class="en">Process automation</span></span>
+                  <p><span class="es">Integraciones con n8n, bases de datos, mensajería y sistemas internos.</span><span class="en">Integrations with n8n, databases, messaging and internal systems.</span></p>
+                </div>
+                <div class="signal-item">
+                  <span class="signal-title"><span class="es">Infraestructura lista para producción</span><span class="en">Production-ready infrastructure</span></span>
+                  <p><span class="es">Deploy seguro en VPS o entornos propios, con observabilidad y continuidad.</span><span class="en">Secure deployment on VPS or owned environments, with observability and continuity.</span></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- TECH STACK (INFINITE MARQUEE) -->
-    <section class="stack section-padding" id="stack">
-      <div class="marquee-wrapper">
-        <div class="marquee" id="marquee">
-          <!-- JS will populate this to ensure infinite loop -->
+      <section class="trust-strip section-slim">
+        <div class="container trust-grid reveal">
+          <span>OpenAI</span>
+          <span>Anthropic</span>
+          <span>n8n</span>
+          <span>Docker</span>
+          <span>OpenClaw</span>
+          <span>Government APIs</span>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PROCESS SECION -->
-    <section class="process section-padding" id="process">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">
-            <span class="es">Metodología</span><span class="en">Methodology</span>
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker"><span class="es">Servicios</span><span class="en">Services</span></span>
+            <h2><span class="es">Diseño premium, ingeniería seria y foco absoluto en impacto.</span><span class="en">Premium design, serious engineering and absolute focus on impact.</span></h2>
+            <p><span class="es">No vendemos “IA” como buzzword. Diseñamos sistemas concretos: asistentes, automatizaciones, integraciones, plataformas internas y operaciones AI-native.</span><span class="en">We do not sell “AI” as a buzzword. We design concrete systems: assistants, automations, integrations, internal platforms and AI-native operations.</span></p>
           </div>
-          <h2>
-            <span class="es">De la Visión a la Producción</span>
-            <span class="en">From Vision to Production</span>
-          </h2>
-        </div>
-
-        <div class="timeline-container">
-          <!-- Line -->
-          <div class="timeline-line">
-            <div class="timeline-progress"></div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot">1</div>
-            <div class="timeline-content glass-card">
-              <h3><span class="es">Auditoría Arquitectónica</span><span class="en">Architectural Audit</span></h3>
-              <p>
-                <span class="es">Análisis profundo de los cuellos de botella operativos y diseño de la arquitectura de
-                  la solución óptima.</span>
-                <span class="en">Deep analysis of operational bottlenecks and design of the optimal solution
-                  architecture.</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot">2</div>
-            <div class="timeline-content glass-card">
-              <h3><span class="es">Desarrollo e Integración</span><span class="en">Development & Integration</span></h3>
-              <p>
-                <span class="es">Construcción de de flujos de n8n, despliegue de infraestructura Docker y tuneo de
-                  prompts LLM.</span>
-                <span class="en">Building n8n workflows, deploying Docker infrastructure, and tuning LLM prompts.</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot">3</div>
-            <div class="timeline-content glass-card">
-              <h3><span class="es">Pruebas en Staging</span><span class="en">Staging Testing</span></h3>
-              <p>
-                <span class="es">Simulación de carga y escenarios de error para asegurar resiliencia total del sistema
-                  antes del pase a producción.</span>
-                <span class="en">Load simulation and edge-case testing to ensure total system resilience before going to
-                  production.</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot">4</div>
-            <div class="timeline-content glass-card">
-              <h3><span class="es">Despliegue y Monitoreo</span><span class="en">Deployment & Monitoring</span></h3>
-              <p>
-                <span class="es">Lanzamiento, entrega de documentación técnica y establecimiento de SLAs para soporte
-                  continuo.</span>
-                <span class="en">Launch, handover of technical documentation, and establishment of SLAs for ongoing
-                  support.</span>
-              </p>
-            </div>
+          <div class="services-grid">
+            <article class="service-card glass reveal delay-1">
+              <div class="service-icon">◎</div>
+              <h3><span class="es">Agentes conversacionales</span><span class="en">Conversational agents</span></h3>
+              <p><span class="es">Bots y asistentes para WhatsApp, Telegram, web y canales internos con uso real de herramientas y memoria operacional.</span><span class="en">Bots and assistants for WhatsApp, Telegram, web and internal channels with real tool use and operational memory.</span></p>
+            </article>
+            <article class="service-card glass reveal delay-2">
+              <div class="service-icon">◈</div>
+              <h3><span class="es">Automatización end-to-end</span><span class="en">End-to-end automation</span></h3>
+              <p><span class="es">Orquestación de procesos con n8n, APIs, CRMs, mail, mensajería, bases de datos y lógica de negocio.</span><span class="en">Process orchestration with n8n, APIs, CRMs, email, messaging, databases and business logic.</span></p>
+            </article>
+            <article class="service-card glass reveal delay-3">
+              <div class="service-icon">▣</div>
+              <h3><span class="es">Infraestructura AI-native</span><span class="en">AI-native infrastructure</span></h3>
+              <p><span class="es">Deploys self-hosted, observabilidad, seguridad, backups y operación continua para soluciones que no pueden fallar.</span><span class="en">Self-hosted deploys, observability, security, backups and continuous operation for solutions that cannot fail.</span></p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CTA -->
-    <section class="cta section-padding" id="contact">
-      <div class="container">
-        <div class="cta-box glass-card reveal">
-          <h2>
-            <span class="es">¿Escalamos tu infraestructura?</span>
-            <span class="en">Ready to scale your infrastructure?</span>
-          </h2>
-          <p>
-            <span class="es">Agendá una llamada técnica para discutir la arquitectura de tu próxima
-              automatización.</span>
-            <span class="en">Book a technical call to discuss the architecture of your next automation.</span>
-          </p>
-          <a href="mailto:wenceslao.maislin@gmail.com" class="btn-primary" style="margin-top: 2rem;">
-            <span class="es">Iniciar Conversación &RightArrow;</span>
-            <span class="en">Start Conversation &RightArrow;</span>
-          </a>
+      <section class="section" id="solutions">
+        <div class="container two-column">
+          <div class="section-heading reveal">
+            <span class="section-kicker"><span class="es">Soluciones</span><span class="en">Solutions</span></span>
+            <h2><span class="es">Casos donde una consultora de IA tiene que estar a la altura.</span><span class="en">Use cases where an AI consultancy has to perform at the highest level.</span></h2>
+          </div>
+          <div class="solution-stack">
+            <article class="solution-row glass reveal delay-1">
+              <div>
+                <h3><span class="es">Operaciones internas con IA</span><span class="en">Internal AI operations</span></h3>
+                <p><span class="es">Asistentes para equipos, acceso a documentación, consultas de estado, automatización de seguimiento y workflows internos.</span><span class="en">Assistants for teams, documentation access, status queries, follow-up automation and internal workflows.</span></p>
+              </div>
+              <span class="tag"><span class="es">empresa</span><span class="en">enterprise</span></span>
+            </article>
+            <article class="solution-row glass reveal delay-2">
+              <div>
+                <h3><span class="es">Atención y venta conversacional</span><span class="en">Conversational sales and support</span></h3>
+                <p><span class="es">Canales de atención con IA que responden, clasifican, escalan y ejecutan acciones reales sobre tus sistemas.</span><span class="en">AI-driven support channels that answer, classify, escalate and execute real actions on your systems.</span></p>
+              </div>
+              <span class="tag"><span class="es">canales</span><span class="en">channels</span></span>
+            </article>
+            <article class="solution-row glass reveal delay-3">
+              <div>
+                <h3><span class="es">Sistemas públicos y expedientes</span><span class="en">Public systems and records</span></h3>
+                <p><span class="es">Integración con plataformas gubernamentales, expedientes, documentos y procesos con trazabilidad real.</span><span class="en">Integration with government platforms, records, documents and processes with real traceability.</span></p>
+              </div>
+              <span class="tag"><span class="es">sector público</span><span class="en">public sector</span></span>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <section class="section" id="approach">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker"><span class="es">Método</span><span class="en">Approach</span></span>
+            <h2><span class="es">Una ejecución elegante empieza con una arquitectura honesta.</span><span class="en">Elegant execution starts with honest architecture.</span></h2>
+          </div>
+          <div class="approach-grid">
+            <article class="approach-card glass reveal">
+              <span class="step">01</span>
+              <h3><span class="es">Diagnóstico</span><span class="en">Diagnosis</span></h3>
+              <p><span class="es">Entendemos procesos, restricciones, riesgos, datos, canales y oportunidad económica.</span><span class="en">We understand processes, constraints, risks, data, channels and economic opportunity.</span></p>
+            </article>
+            <article class="approach-card glass reveal delay-1">
+              <span class="step">02</span>
+              <h3><span class="es">Diseño</span><span class="en">Design</span></h3>
+              <p><span class="es">Definimos arquitectura, experiencia, proveedores, modelos, fallback y criterios de operación.</span><span class="en">We define architecture, experience, providers, models, fallback chains and operational criteria.</span></p>
+            </article>
+            <article class="approach-card glass reveal delay-2">
+              <span class="step">03</span>
+              <h3><span class="es">Despliegue</span><span class="en">Deployment</span></h3>
+              <p><span class="es">Construimos, integramos y llevamos a producción con monitoreo, documentación y continuidad.</span><span class="en">We build, integrate and move to production with monitoring, documentation and continuity.</span></p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <a href="#" class="logo">ech<span>ai</span>.</a>
-        <p class="copyright">© 2026 Echeneid AI. <span class="es">Todos los derechos reservados.</span><span
-            class="en">All rights reserved.</span></p>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener">LinkedIn</a>
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-panel glass reveal">
+            <div>
+              <span class="section-kicker"><span class="es">Contacto</span><span class="en">Contact</span></span>
+              <h2><span class="es">Si la operación es importante, la IA también debería estar bien hecha.</span><span class="en">If the operation matters, AI should be built properly too.</span></h2>
+              <p><span class="es">Diseñamos soluciones premium para organizaciones que necesitan velocidad, criterio técnico y una ejecución seria.</span><span class="en">We design premium solutions for organizations that need speed, technical judgment and serious execution.</span></p>
+            </div>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:wenceslao.maislin@gmail.com">wenceslao.maislin@gmail.com</a>
+              <a class="btn btn-ghost" href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>© 2026 Echeneid AI</span>
+        <div class="footer-links">
+          <a href="servicios.html"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
           <a href="mailto:wenceslao.maislin@gmail.com">Email</a>
+          <a href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
   <script src="main.js"></script>
 </body>
-
 </html>
