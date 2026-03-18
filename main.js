@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
   const buttons = document.querySelectorAll('[data-lang-btn]');
