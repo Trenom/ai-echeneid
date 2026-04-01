@@ -610,7 +610,7 @@ h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
 }
 
 .division-capabilities li::before {
-  content: '\2192';
+  content: '→';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -664,6 +664,148 @@ h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* ============================================================================
+   AI AGENTS SHOWCASE
+   ============================================================================ */
+
+.agents-showcase {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  position: relative;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.agent-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.25rem;
+  padding: var(--spacing-2xl);
+  transition: all var(--transition-smooth);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.agent-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--agent-accent), transparent);
+  opacity: 0.7;
+}
+
+.agent-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at top left, var(--agent-accent) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+  pointer-events: none;
+}
+
+.agent-card:hover {
+  border-color: var(--agent-accent);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.agent-card:hover::after {
+  opacity: 0.05;
+}
+
+.agent-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.agent-badge.own {
+  background: rgba(138, 180, 255, 0.15);
+  color: var(--accent-ai);
+  border: 1px solid rgba(138, 180, 255, 0.3);
+}
+
+.agent-badge.generic {
+  background: rgba(192, 132, 252, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.25);
+}
+
+.agent-icon {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.agent-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.agent-usecase {
+  color: var(--agent-accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.agent-desc {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.agent-value {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.agent-value::before {
+  content: '→ ';
+  color: var(--agent-accent);
 }
 
 /* ============================================================================
@@ -956,6 +1098,19 @@ h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
 
   .division-capabilities li {
     padding-left: var(--spacing-md);
+  }
+
+  .agents-showcase {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .agents-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .agent-card {
+    padding: var(--spacing-lg);
   }
 
   .approach {
