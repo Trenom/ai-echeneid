@@ -3,255 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Echeneid AI — Consultora premium de inteligencia artificial</title>
-  <meta name="description" content="Consultora premium de inteligencia artificial, automatización y agentes para empresas y sector público. Arquitectura, despliegue y operación de sistemas de IA listos para producción.">
+  <meta name="description" content="Grupo Echeneid — Tecnología que transforma organizaciones. IA, seguridad informática, gobierno digital y energía renovable.">
+  <title>Grupo Echeneid — Tecnología que transforma organizaciones</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="site-shell">
-    <div class="ambient ambient-a"></div>
-    <div class="ambient ambient-b"></div>
-    <div class="ambient-grid"></div>
-
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <a href="#home" class="brand">echeneid<span>ai</span></a>
-        <nav class="desktop-nav">
-          <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
-          <a href="#solutions"><span class="es">Soluciones</span><span class="en">Solutions</span></a>
-          <a href="#management"><span class="es">Control</span><span class="en">Control</span></a>
-          <a href="#approach"><span class="es">Método</span><span class="en">Approach</span></a>
-          <a href="servicios.html"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
-        </nav>
-        <div class="topbar-actions">
-          <div class="lang-switch" aria-label="language switch">
-            <button class="lang-btn active" data-lang-btn="es">ES</button>
-            <button class="lang-btn" data-lang-btn="en">EN</button>
-          </div>
-          <a class="btn btn-secondary" href="#contact"><span class="es">Agendar llamada</span><span class="en">Book a call</span></a>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero section" id="home">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="eyebrow reveal">
-              <span class="status-dot"></span>
-              <span class="es">Consultora premium de IA · arquitectura, agentes y automatización</span>
-              <span class="en">Premium AI consultancy · architecture, agents and automation</span>
-            </div>
-            <h1 class="reveal delay-1">
-              <span class="es">Construimos sistemas de <span class="gradient-text">inteligencia artificial</span> que operan de verdad.</span>
-              <span class="en">We build <span class="gradient-text">artificial intelligence</span> systems that operate in the real world.</span>
-            </h1>
-            <p class="hero-lead reveal delay-2">
-              <span class="es">Diseñamos, desplegamos y operamos plataformas de IA para empresas y organismos que necesitan automatizar procesos críticos, integrar datos complejos y convertir lenguaje natural en ejecución real.</span>
-              <span class="en">We design, deploy and operate AI platforms for companies and institutions that need to automate critical processes, integrate complex data and turn natural language into real execution.</span>
-            </p>
-            <div class="hero-actions reveal delay-3">
-              <a class="btn btn-primary" href="#contact"><span class="es">Hablar sobre tu proyecto</span><span class="en">Discuss your project</span></a>
-              <a class="btn btn-ghost" href="#services"><span class="es">Ver servicios</span><span class="en">View services</span></a>
-            </div>
-            <div class="hero-metrics reveal delay-4">
-              <div class="metric-card">
-                <strong>24/7</strong>
-                <span class="es">operación automatizada</span><span class="en">automated operation</span>
-              </div>
-              <div class="metric-card">
-                <strong>AI + Ops</strong>
-                <span class="es">de estrategia a producción</span><span class="en">from strategy to production</span>
-              </div>
-              <div class="metric-card">
-                <strong>Self-hosted</strong>
-                <span class="es">control total de datos</span><span class="en">full data control</span>
-              </div>
-            </div>
-          </div>
-          <div class="hero-panel reveal delay-2">
-            <div class="signal-card glass">
-              <div class="signal-top">
-                <span class="pill"><span class="es">Señales clave</span><span class="en">Key signals</span></span>
-                <span class="mini-label">Echeneid AI</span>
-              </div>
-              <div class="signal-list">
-                <div class="signal-item">
-                  <span class="signal-title"><span class="es">Agentes operativos</span><span class="en">Operational agents</span></span>
-                  <p><span class="es">Asistentes que consultan APIs, ejecutan workflows y responden con contexto.</span><span class="en">Assistants that query APIs, execute workflows and answer with context.</span></p>
-                </div>
-                <div class="signal-item">
-                  <span class="signal-title"><span class="es">Automatización de procesos</span><span class="en">Process automation</span></span>
-                  <p><span class="es">Integraciones con n8n, bases de datos, mensajería y sistemas internos.</span><span class="en">Integrations with n8n, databases, messaging and internal systems.</span></p>
-                </div>
-                <div class="signal-item">
-                  <span class="signal-title"><span class="es">Infraestructura lista para producción</span><span class="en">Production-ready infrastructure</span></span>
-                  <p><span class="es">Deploy seguro en VPS o entornos propios, con observabilidad y continuidad.</span><span class="en">Secure deployment on VPS or owned environments, with observability and continuity.</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TECH MARQUEE (replaces static trust-strip) -->
-      <section class="tech-marquee section-slim" id="tech">
-        <div class="marquee-container">
-          <div class="marquee-track" id="marquee-track">
-            <!-- Populated by JS -->
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="services">
-        <div class="container">
-          <div class="section-heading reveal">
-            <span class="section-kicker"><span class="es">Servicios</span><span class="en">Services</span></span>
-            <h2><span class="es">Diseño premium, ingeniería seria y foco absoluto en impacto.</span><span class="en">Premium design, serious engineering and absolute focus on impact.</span></h2>
-            <p><span class="es">No vendemos "IA" como buzzword. Diseñamos sistemas concretos: asistentes, automatizaciones, integraciones, plataformas internas y operaciones AI-native.</span><span class="en">We do not sell "AI" as a buzzword. We design concrete systems: assistants, automations, integrations, internal platforms and AI-native operations.</span></p>
-          </div>
-          <div class="services-grid">
-            <article class="service-card glass reveal delay-1">
-              <div class="service-icon">◎</div>
-              <h3><span class="es">Agentes conversacionales</span><span class="en">Conversational agents</span></h3>
-              <p><span class="es">Bots y asistentes para WhatsApp, Telegram, web y canales internos con uso real de herramientas y memoria operacional.</span><span class="en">Bots and assistants for WhatsApp, Telegram, web and internal channels with real tool use and operational memory.</span></p>
-            </article>
-            <article class="service-card glass reveal delay-2">
-              <div class="service-icon">◈</div>
-              <h3><span class="es">Automatización end-to-end</span><span class="en">End-to-end automation</span></h3>
-              <p><span class="es">Orquestación de procesos con n8n, APIs, CRMs, mail, mensajería, bases de datos y lógica de negocio.</span><span class="en">Process orchestration with n8n, APIs, CRMs, email, messaging, databases and business logic.</span></p>
-            </article>
-            <article class="service-card glass reveal delay-3">
-              <div class="service-icon">▣</div>
-              <h3><span class="es">Infraestructura AI-native</span><span class="en">AI-native infrastructure</span></h3>
-              <p><span class="es">Deploys self-hosted, observabilidad, seguridad, backups y operación continua para soluciones que no pueden fallar.</span><span class="en">Self-hosted deploys, observability, security, backups and continuous operation for solutions that cannot fail.</span></p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="solutions">
-        <div class="container two-column">
-          <div class="section-heading reveal">
-            <span class="section-kicker"><span class="es">Soluciones</span><span class="en">Solutions</span></span>
-            <h2><span class="es">Casos donde una consultora de IA tiene que estar a la altura.</span><span class="en">Use cases where an AI consultancy has to perform at the highest level.</span></h2>
-          </div>
-          <div class="solution-stack">
-            <article class="solution-row glass reveal delay-1">
-              <div>
-                <h3><span class="es">Operaciones internas con IA</span><span class="en">Internal AI operations</span></h3>
-                <p><span class="es">Asistentes para equipos, acceso a documentación, consultas de estado, automatización de seguimiento y workflows internos.</span><span class="en">Assistants for teams, documentation access, status queries, follow-up automation and internal workflows.</span></p>
-              </div>
-              <span class="tag"><span class="es">empresa</span><span class="en">enterprise</span></span>
-            </article>
-            <article class="solution-row glass reveal delay-2">
-              <div>
-                <h3><span class="es">Atención y venta conversacional</span><span class="en">Conversational sales and support</span></h3>
-                <p><span class="es">Canales de atención con IA que responden, clasifican, escalan y ejecutan acciones reales sobre tus sistemas.</span><span class="en">AI-driven support channels that answer, classify, escalate and execute real actions on your systems.</span></p>
-              </div>
-              <span class="tag"><span class="es">canales</span><span class="en">channels</span></span>
-            </article>
-            <article class="solution-row glass reveal delay-3">
-              <div>
-                <h3><span class="es">Sistemas públicos y expedientes</span><span class="en">Public systems and records</span></h3>
-                <p><span class="es">Integración con plataformas gubernamentales, expedientes, documentos y procesos con trazabilidad real.</span><span class="en">Integration with government platforms, records, documents and processes with real traceability.</span></p>
-              </div>
-              <span class="tag"><span class="es">sector público</span><span class="en">public sector</span></span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- NEW: MANAGEMENT CONTROL SECTION -->
-      <section class="section" id="management">
-        <div class="container">
-          <div class="section-heading reveal">
-            <span class="section-kicker"><span class="es">Control de gestión</span><span class="en">Management Control</span></span>
-            <h2><span class="es">Sistemas de control de gestión potenciados con IA.</span><span class="en">AI-powered management control systems.</span></h2>
-            <p><span class="es">Dashboards personalizados, seguimiento de KPIs, reportes automáticos y monitoreo de cumplimiento normativo en tiempo real.</span><span class="en">Custom dashboards, KPI tracking, automated reporting and real-time compliance monitoring.</span></p>
-          </div>
-          <div class="control-grid">
-            <article class="control-card glass reveal delay-1">
-              <div class="control-icon">📊</div>
-              <h3><span class="es">Dashboards en tiempo real</span><span class="en">Real-time dashboards</span></h3>
-              <p><span class="es">Visualización interactiva de métricas operacionales actualizadas continuamente.</span><span class="en">Interactive visualization of continuously updated operational metrics.</span></p>
-            </article>
-            <article class="control-card glass reveal delay-2">
-              <div class="control-icon">🔔</div>
-              <h3><span class="es">Alertas automatizadas</span><span class="en">Automated alerts</span></h3>
-              <p><span class="es">Notificaciones inteligentes ante desviaciones de KPIs y eventos críticos.</span><span class="en">Intelligent notifications for KPI deviations and critical events.</span></p>
-            </article>
-            <article class="control-card glass reveal delay-3">
-              <div class="control-icon">📄</div>
-              <h3><span class="es">Seguimiento de documentos</span><span class="en">Document tracking</span></h3>
-              <p><span class="es">Integración GDE para control de expedientes y documentación normativa.</span><span class="en">GDE integration for file management and regulatory documentation.</span></p>
-            </article>
-            <article class="control-card glass reveal delay-4">
-              <div class="control-icon">📈</div>
-              <h3><span class="es">Métricas de procesos</span><span class="en">Process metrics</span></h3>
-              <p><span class="es">Análisis detallado de performance de workflows y automatizaciones.</span><span class="en">Detailed analysis of workflow and automation performance.</span></p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="approach">
-        <div class="container">
-          <div class="section-heading reveal">
-            <span class="section-kicker"><span class="es">Método</span><span class="en">Approach</span></span>
-            <h2><span class="es">Una ejecución elegante empieza con una arquitectura honesta.</span><span class="en">Elegant execution starts with honest architecture.</span></h2>
-          </div>
-          <div class="approach-grid">
-            <article class="approach-card glass reveal">
-              <span class="step">01</span>
-              <h3><span class="es">Diagnóstico</span><span class="en">Diagnosis</span></h3>
-              <p><span class="es">Entendemos procesos, restricciones, riesgos, datos, canales y oportunidad económica.</span><span class="en">We understand processes, constraints, risks, data, channels and economic opportunity.</span></p>
-            </article>
-            <article class="approach-card glass reveal delay-1">
-              <span class="step">02</span>
-              <h3><span class="es">Diseño</span><span class="en">Design</span></h3>
-              <p><span class="es">Definimos arquitectura, experiencia, proveedores, modelos, fallback y criterios de operación.</span><span class="en">We define architecture, experience, providers, models, fallback chains and operational criteria.</span></p>
-            </article>
-            <article class="approach-card glass reveal delay-2">
-              <span class="step">03</span>
-              <h3><span class="es">Despliegue</span><span class="en">Deployment</span></h3>
-              <p><span class="es">Construimos, integramos y llevamos a producción con monitoreo, documentación y continuidad.</span><span class="en">We build, integrate and move to production with monitoring, documentation and continuity.</span></p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <div class="container">
-          <div class="contact-panel glass reveal">
-            <div>
-              <span class="section-kicker"><span class="es">Contacto</span><span class="en">Contact</span></span>
-              <h2><span class="es">Si la operación es importante, la IA también debería estar bien hecha.</span><span class="en">If the operation matters, AI should be built properly too.</span></h2>
-              <p><span class="es">Diseñamos soluciones premium para organizaciones que necesitan velocidad, criterio técnico y una ejecución seria.</span><span class="en">We design premium solutions for organizations that need speed, technical judgment and serious execution.</span></p>
-            </div>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:wenceslao.maislin@gmail.com">wenceslao.maislin@gmail.com</a>
-              <a class="btn btn-ghost" href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <span>© 2026 Echeneid AI</span>
-        <div class="footer-links">
-          <a href="servicios.html"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
-          <a href="mailto:wenceslao.maislin@gmail.com">Email</a>
-          <a href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </footer>
+  <!-- Animated background orbs -->
+  <div class="background-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
   </div>
+
+  <!-- Grid overlay -->
+  <div class="grid-overlay"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <span class="logo-text">echeneid<span class="accent">group</span></span>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link"><span class="es">Inicio</span><span class="en">Home</span></a>
+        <a href="#divisions" class="nav-link"><span class="es">Divisiones</span><span class="en">Divisions</span></a>
+        <a href="#approach" class="nav-link"><span class="es">Enfoque</span><span class="en">Approach</span></a>
+        <a href="#contact" class="nav-link"><span class="es">Contacto</span><span class="en">Contact</span></a>
+        <a href="servicios.html" class="nav-link"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
+      </nav>
+
+      <div class="navbar-right">
+        <button class="lang-toggle" data-lang-btn="es">ES</button>
+        <button class="lang-toggle" data-lang-btn="en">EN</button>
+        <a href="#contact" class="cta-btn"><span class="es">Contactar</span><span class="en">Contact Us</span></a>
+      </div>
+
+      <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title reveal">
+          <span class="es">Tecnología que transforma <span class="gradient-text">organizaciones</span></span>
+          <span class="en">Technology that transforms <span class="gradient-text">organizations</span></span>
+        </h1>
+
+        <p class="hero-subtitle reveal">
+          <span class="es">Un grupo multidisciplinario de expertos en IA, seguridad, gobierno digital y energía renovable. Impulsamos la transformación digital con soluciones tecnológicas de clase mundial.</span>
+          <span class="en">A multidisciplinary group of experts in AI, security, digital government, and renewable energy. We drive digital transformation with world-class technology solutions.</span>
+        </p>
+
+        <div class="hero-ctas reveal">
+          <a href="#contact" class="btn btn-primary">
+            <span class="es">Iniciar Proyecto</span>
+            <span class="en">Start Project</span>
+          </a>
+          <a href="#divisions" class="btn btn-secondary">
+            <span class="es">Explorar Divisiones</span>
+            <span class="en">Explore Divisions</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mini division cards -->
+      <div class="hero-divisions reveal">
+        <div class="mini-card" style="--accent: #8ab4ff">
+          <div class="mini-card-icon">🤖</div>
+          <h3><span class="es">Echeneid AI</span><span class="en">Echeneid AI</span></h3>
+          <p><span class="es">Automatización & Agentes IA</span><span class="en">Automation & AI Agents</span></p>
+        </div>
+
+        <div class="mini-card" style="--accent: #ff6b6b">
+          <div class="mini-card-icon">🔐</div>
+          <h3><span class="es">Echeneid Security</span><span class="en">Echeneid Security</span></h3>
+          <p><span class="es">Auditoría & Pentesting</span><span class="en">Auditing & Pentesting</span></p>
+        </div>
+
+        <div class="mini-card" style="--accent: #4ee1c1">
+          <div class="mini-card-icon">🏛️</div>
+          <h3><span class="es">Echeneid Gov</span><span class="en">Echeneid Gov</span></h3>
+          <p><span class="es">Soluciones Sector Público</span><span class="en">Public Sector Solutions</span></p>
+        </div>
+
+        <div class="mini-card" style="--accent: #fbbf24">
+          <div class="mini-card-icon">⚡</div>
+          <h3><span class="es">Echeneid Energía</span><span class="en">Echeneid Energy</span></h3>
+          <p><span class="es">Energías Renovables</span><span class="en">Renewable Energy</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisions Section -->
+    <section id="divisions" class="divisions">
+      <div class="section-header reveal">
+        <h2><span class="es">Nuestras Divisiones</span><span class="en">Our Divisions</span></h2>
+        <p><span class="es">Cuatro pilares de excelencia tecnológica</span><span class="en">Four pillars of technological excellence</span></p>
+      </div>
+
+      <div class="divisions-grid">
+        <!-- Echeneid AI -->
+        <div class="division-card reveal" style="--accent: #8ab4ff">
+          <div class="division-header">
+            <div class="division-icon">🤖</div>
+            <h3><span class="es">Echeneid AI</span><span class="en">Echeneid AI</span></h3>
+          </div>
+          <p class="division-tagline"><span class="es">Inteligencia Artificial Empresarial</span><span class="en">Enterprise AI Intelligence</span></p>
+          <p class="division-description">
+            <span class="es">Transformamos procesos complejos con agentes de IA, automatización end-to-end e infraestructura nativa de inteligencia artificial.</span>
+            <span class="en">We transform complex processes with AI agents, end-to-end automation, and native AI infrastructure.</span>
+          </p>
+          <ul class="division-capabilities">
+            <li><span class="es">Agentes conversacionales avanzados</span><span class="en">Advanced conversational agents</span></li>
+            <li><span class="es">Automatización end-to-end con n8n</span><span class="en">End-to-end automation with n8n</span></li>
+            <li><span class="es">Plataformas IA production-ready</span><span class="en">Production-ready AI platforms</span></li>
+            <li><span class="es">Dashboards de control inteligentes</span><span class="en">Intelligent control dashboards</span></li>
+          </ul>
+        </div>
+
+        <!-- Echeneid Security -->
+        <div class="division-card reveal" style="--accent: #ff6b6b">
+          <div class="division-header">
+            <div class="division-icon">🔐</div>
+            <h3><span class="es">Echeneid Security</span><span class="en">Echeneid Security</span></h3>
+          </div>
+          <p class="division-tagline"><span class="es">Seguridad Informática Integral</span><span class="en">Comprehensive IT Security</span></p>
+          <p class="division-description">
+            <span class="es">Protegemos tu infraestructura con auditorías de seguridad, pentesting avanzado y consultoría de cumplimiento normativo.</span>
+            <span class="en">We protect your infrastructure with security audits, advanced pentesting, and compliance consulting.</span>
+          </p>
+          <ul class="division-capabilities">
+            <li><span class="es">Auditoría de seguridad integral</span><span class="en">Comprehensive security auditing</span></li>
+            <li><span class="es">Pentesting y assessment</span><span class="en">Pentesting and vulnerability assessment</span></li>
+            <li><span class="es">Consultoría ISO 27001</span><span class="en">ISO 27001 consulting</span></li>
+            <li><span class="es">CISO-as-a-Service</span><span class="en">CISO-as-a-Service</span></li>
+          </ul>
+        </div>
+
+        <!-- Echeneid Gov -->
+        <div class="division-card reveal" style="--accent: #4ee1c1">
+          <div class="division-header">
+            <div class="division-icon">🏛️</div>
+            <h3><span class="es">Echeneid Gov</span><span class="en">Echeneid Gov</span></h3>
+          </div>
+          <p class="division-tagline"><span class="es">Gobierno Digital Moderno</span><span class="en">Modern Digital Government</span></p>
+          <p class="division-description">
+            <span class="es">Soluciones especializadas para el sector público: integración GDE, SUGOP, gestión de expedientes electrónicos y dashboards de control.</span>
+            <span class="en">Specialized solutions for the public sector: GDE integration, SUGOP, electronic records management, and control dashboards.</span>
+          </p>
+          <ul class="division-capabilities">
+            <li><span class="es">Integración GDE (Gestor Documental)</span><span class="en">GDE integration</span></li>
+            <li><span class="es">Sistema SUGOP</span><span class="en">SUGOP system</span></li>
+            <li><span class="es">Gestión de expedientes electrónicos</span><span class="en">Electronic records management</span></li>
+            <li><span class="es">Dashboards de gestión pública</span><span class="en">Public management dashboards</span></li>
+          </ul>
+        </div>
+
+        <!-- Echeneid Energía -->
+        <div class="division-card reveal" style="--accent: #fbbf24">
+          <div class="division-header">
+            <div class="division-icon">⚡</div>
+            <h3><span class="es">Echeneid Energía</span><span class="en">Echeneid Energy</span></h3>
+          </div>
+          <p class="division-tagline"><span class="es">Energías Renovables & Sostenibilidad</span><span class="en">Renewable Energy & Sustainability</span></p>
+          <p class="division-description">
+            <span class="es">Lideramos la transición energética con proyectos solares, infraestructura renovable y auditoría de eficiencia energética.</span>
+            <span class="en">We lead the energy transition with solar projects, renewable infrastructure, and energy efficiency auditing.</span>
+          </p>
+          <ul class="division-capabilities">
+            <li><span class="es">Proyectos de energía solar</span><span class="en">Solar energy projects</span></li>
+            <li><span class="es">Infraestructura renovable escalable</span><span class="en">Scalable renewable infrastructure</span></li>
+            <li><span class="es">Auditoría de eficiencia energética</span><span class="en">Energy efficiency auditing</span></li>
+            <li><span class="es">Consultoría de sostenibilidad</span><span class="en">Sustainability consulting</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Marquee -->
+    <section class="tech-stack">
+      <div class="section-header reveal">
+        <h2><span class="es">Stack Tecnológico</span><span class="en">Tech Stack</span></h2>
+      </div>
+      <div class="marquee-container">
+        <div class="marquee">
+          <div class="marquee-content" id="marquee-content">
+            <!-- Content populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="approach">
+      <div class="section-header reveal">
+        <h2><span class="es">Nuestro Enfoque</span><span class="en">Our Approach</span></h2>
+        <p><span class="es">Un proceso probado en 4 fases</span><span class="en">A proven 4-phase process</span></p>
+      </div>
+
+      <div class="approach-grid">
+        <div class="approach-card reveal">
+          <div class="approach-number">01</div>
+          <h3><span class="es">Diagnóstico</span><span class="en">Diagnosis</span></h3>
+          <p><span class="es">Analizamos tu infraestructura, procesos y necesidades para comprender el panorama completo.</span><span class="en">We analyze your infrastructure, processes, and needs to understand the complete picture.</span></p>
+        </div>
+
+        <div class="approach-card reveal">
+          <div class="approach-number">02</div>
+          <h3><span class="es">Diseño</span><span class="en">Design</span></h3>
+          <p><span class="es">Diseñamos una solución a medida con arquitectura escalable y best practices.</span><span class="en">We design a custom solution with scalable architecture and best practices.</span></p>
+        </div>
+
+        <div class="approach-card reveal">
+          <div class="approach-number">03</div>
+          <h3><span class="es">Despliegue</span><span class="en">Deployment</span></h3>
+          <p><span class="es">Implementamos la solución con rigor técnico, testing exhaustivo y documentación completa.</span><span class="en">We implement with technical rigor, exhaustive testing, and complete documentation.</span></p>
+        </div>
+
+        <div class="approach-card reveal">
+          <div class="approach-number">04</div>
+          <h3><span class="es">Operación</span><span class="en">Operations</span></h3>
+          <p><span class="es">Soporte continuo, monitoreo 24/7 y optimización para máxima performance y seguridad.</span><span class="en">Continuous support, 24/7 monitoring, and optimization for peak performance and security.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="contact-content reveal">
+        <h2><span class="es">Iniciemos tu Transformación</span><span class="en">Start Your Transformation</span></h2>
+        <p><span class="es">Estamos listos para llevar tu organización al siguiente nivel</span><span class="en">We're ready to take your organization to the next level</span></p>
+
+        <div class="contact-methods">
+          <a href="mailto:wenceslao.maislin@gmail.com" class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info">
+              <h3><span class="es">Email</span><span class="en">Email</span></h3>
+              <p>wenceslao.maislin@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/wenceslao-maislin-96673314/" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon">💼</div>
+            <div class="contact-info">
+              <h3><span class="es">LinkedIn</span><span class="en">LinkedIn</span></h3>
+              <p><span class="es">Conecta con nosotros</span><span class="en">Connect with us</span></p>
+            </div>
+          </a>
+
+          <a href="https://wa.me/5493517564505" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon">💬</div>
+            <div class="contact-info">
+              <h3><span class="es">WhatsApp</span><span class="en">WhatsApp</span></h3>
+              <p><span class="es">Chat directo</span><span class="en">Direct chat</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5493517564505" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 <span class="es">Grupo Echeneid</span><span class="en">Grupo Echeneid</span>. <span class="es">Todos los derechos reservados.</span><span class="en">All rights reserved.</span></p>
+      <div class="footer-links">
+        <a href="#"><span class="es">Privacidad</span><span class="en">Privacy</span></a>
+        <a href="#"><span class="es">Términos</span><span class="en">Terms</span></a>
+      </div>
+    </div>
+  </footer>
+
   <script src="main.js"></script>
 </body>
 </html>
