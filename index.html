@@ -22,6 +22,7 @@
         <nav class="desktop-nav">
           <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
           <a href="#solutions"><span class="es">Soluciones</span><span class="en">Solutions</span></a>
+          <a href="#management"><span class="es">Control</span><span class="en">Control</span></a>
           <a href="#approach"><span class="es">Método</span><span class="en">Approach</span></a>
           <a href="servicios.html"><span class="es">Capacidades</span><span class="en">Capabilities</span></a>
         </nav>
@@ -96,14 +97,12 @@
         </div>
       </section>
 
-      <section class="trust-strip section-slim">
-        <div class="container trust-grid reveal">
-          <span>OpenAI</span>
-          <span>Anthropic</span>
-          <span>n8n</span>
-          <span>Docker</span>
-          <span>OpenClaw</span>
-          <span>Government APIs</span>
+      <!-- TECH MARQUEE (replaces static trust-strip) -->
+      <section class="tech-marquee section-slim" id="tech">
+        <div class="marquee-container">
+          <div class="marquee-track" id="marquee-track">
+            <!-- Populated by JS -->
+          </div>
         </div>
       </section>
 
@@ -112,7 +111,7 @@
           <div class="section-heading reveal">
             <span class="section-kicker"><span class="es">Servicios</span><span class="en">Services</span></span>
             <h2><span class="es">Diseño premium, ingeniería seria y foco absoluto en impacto.</span><span class="en">Premium design, serious engineering and absolute focus on impact.</span></h2>
-            <p><span class="es">No vendemos “IA” como buzzword. Diseñamos sistemas concretos: asistentes, automatizaciones, integraciones, plataformas internas y operaciones AI-native.</span><span class="en">We do not sell “AI” as a buzzword. We design concrete systems: assistants, automations, integrations, internal platforms and AI-native operations.</span></p>
+            <p><span class="es">No vendemos "IA" como buzzword. Diseñamos sistemas concretos: asistentes, automatizaciones, integraciones, plataformas internas y operaciones AI-native.</span><span class="en">We do not sell "AI" as a buzzword. We design concrete systems: assistants, automations, integrations, internal platforms and AI-native operations.</span></p>
           </div>
           <div class="services-grid">
             <article class="service-card glass reveal delay-1">
@@ -161,6 +160,39 @@
                 <p><span class="es">Integración con plataformas gubernamentales, expedientes, documentos y procesos con trazabilidad real.</span><span class="en">Integration with government platforms, records, documents and processes with real traceability.</span></p>
               </div>
               <span class="tag"><span class="es">sector público</span><span class="en">public sector</span></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW: MANAGEMENT CONTROL SECTION -->
+      <section class="section" id="management">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker"><span class="es">Control de gestión</span><span class="en">Management Control</span></span>
+            <h2><span class="es">Sistemas de control de gestión potenciados con IA.</span><span class="en">AI-powered management control systems.</span></h2>
+            <p><span class="es">Dashboards personalizados, seguimiento de KPIs, reportes automáticos y monitoreo de cumplimiento normativo en tiempo real.</span><span class="en">Custom dashboards, KPI tracking, automated reporting and real-time compliance monitoring.</span></p>
+          </div>
+          <div class="control-grid">
+            <article class="control-card glass reveal delay-1">
+              <div class="control-icon">📊</div>
+              <h3><span class="es">Dashboards en tiempo real</span><span class="en">Real-time dashboards</span></h3>
+              <p><span class="es">Visualización interactiva de métricas operacionales actualizadas continuamente.</span><span class="en">Interactive visualization of continuously updated operational metrics.</span></p>
+            </article>
+            <article class="control-card glass reveal delay-2">
+              <div class="control-icon">🔔</div>
+              <h3><span class="es">Alertas automatizadas</span><span class="en">Automated alerts</span></h3>
+              <p><span class="es">Notificaciones inteligentes ante desviaciones de KPIs y eventos críticos.</span><span class="en">Intelligent notifications for KPI deviations and critical events.</span></p>
+            </article>
+            <article class="control-card glass reveal delay-3">
+              <div class="control-icon">📄</div>
+              <h3><span class="es">Seguimiento de documentos</span><span class="en">Document tracking</span></h3>
+              <p><span class="es">Integración GDE para control de expedientes y documentación normativa.</span><span class="en">GDE integration for file management and regulatory documentation.</span></p>
+            </article>
+            <article class="control-card glass reveal delay-4">
+              <div class="control-icon">📈</div>
+              <h3><span class="es">Métricas de procesos</span><span class="en">Process metrics</span></h3>
+              <p><span class="es">Análisis detallado de performance de workflows y automatizaciones.</span><span class="en">Detailed analysis of workflow and automation performance.</span></p>
             </article>
           </div>
         </div>
