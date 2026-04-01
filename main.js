@@ -64,15 +64,35 @@ function updateLanguageButtons(lang) {
 
 /**
  * IntersectionObserver for reveal animations
+ * Elements already in the viewport on page load are activated immediately.
  */
 function initRevealAnimations() {
   const revealElements = document.querySelectorAll('.reveal');
 
   if (revealElements.length === 0) return;
 
+  // Helper: check if element is currently in the viewport
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight &&
+      rect.bottom > 0 &&
+      rect.left < window.innerWidth &&
+      rect.right > 0
+    );
+  }
+
+  // 1. Immediately activate elements already visible (no animation delay for above-fold)
+  revealElements.forEach(el => {
+    if (isInViewport(el)) {
+      el.classList.add('active');
+    }
+  });
+
+  // 2. Observe remaining hidden elements for scroll-triggered reveal
   const observerOptions = {
     threshold: CONFIG.revealThreshold,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px 0px 0px'
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -84,7 +104,11 @@ function initRevealAnimations() {
     });
   }, observerOptions);
 
-  revealElements.forEach(el => observer.observe(el));
+  revealElements.forEach(el => {
+    if (!el.classList.contains('active')) {
+      observer.observe(el);
+    }
+  });
 }
 
 /**
